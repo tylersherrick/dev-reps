@@ -23,51 +23,41 @@ function Filters({
 }) {
   return (
     <section className="filters">
-      <div className="filter-group">
-        <label htmlFor="language">
-          Language
-        </label>
+      <select
+        id="language"
+        value={language}
+        onChange={(event) =>
+          setLanguage(event.target.value)
+        }
+      >
+        {LANGUAGES.map((item) => (
+          <option
+            key={item}
+            value={item}
+          >
+            {item === "All" ? "Language" : item}
+          </option>
+        ))}
+      </select>
 
-        <select
-          id="language"
-          value={language}
-          onChange={(event) =>
-            setLanguage(event.target.value)
-          }
-        >
-          {LANGUAGES.map((item) => (
-            <option
-              key={item}
-              value={item}
-            >
-              {item}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <div className="filter-group">
-        <label htmlFor="difficulty">
-          Difficulty
-        </label>
-
-        <select
-          id="difficulty"
-          value={difficulty}
-          onChange={(event) =>
-            setDifficulty(event.target.value)
-          }
-        >
-          {DIFFICULTIES.map((item) => (
-            <option
-              key={item}
-              value={item}
-            >
-              {item}
-            </option>
-          ))}
-        </select>
-      </div>
+      <select
+        id="difficulty"
+        value={difficulty}
+        onChange={(event) =>
+          setDifficulty(event.target.value)
+        }
+      >
+        {DIFFICULTIES.map((item) => (
+          <option
+            key={item}
+            value={item}
+          >
+            {item === "All"
+              ? "Difficulty"
+              : item}
+          </option>
+        ))}
+      </select>
     </section>
   );
 }

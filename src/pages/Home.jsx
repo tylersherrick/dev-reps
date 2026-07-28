@@ -4,7 +4,11 @@ import Header from "../components/Header";
 import Filters from "../components/Filters";
 import Progress from "../components/Progress";
 import TypingArea from "../components/TypingArea";
-import Character from "../components/Character";
+import ExerciseDetails from "../components/ExerciseDetails";
+import ExerciseCode from "../components/ExerciseCode";
+import ExerciseStats from "../components/ExerciseStats";
+import ExerciseResults from "../components/ExerciseResults";
+import ExerciseButtons from "../components/ExerciseButtons";
 import {
   calculateAccuracy,
   calculateWPM,
@@ -19,6 +23,7 @@ function Home() {
   const [typed, setTyped] = useState("");
   const [seconds, setSeconds] = useState(0);
   const [started, setStarted] = useState(false);
+  const [paused, setPaused] = useState(false);
 
   const filteredExercises = useMemo(() => {
     return exercises.filter((exercise) => {
@@ -33,14 +38,14 @@ function Home() {
   }, [language, difficulty]);
 
   useEffect(() => {
-    if (!started) return;
+    if (!started || paused) return;
 
     const interval = setInterval(() => {
       setSeconds((value) => value + 1);
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [started]);
+  }, [started, paused]);
 
   useEffect(() => {
     if (typed.length > 0 && !started) {
@@ -74,6 +79,7 @@ function Home() {
     setTyped("");
     setSeconds(0);
     setStarted(false);
+    setPaused(false);
   }
 
   function nextExercise() {
@@ -83,9 +89,7 @@ function Home() {
     resetTyping();
 
     if (language === "All") {
-      if (filteredExercises.length === 1) {
-        return;
-      }
+      if (filteredExercises.length === 1) return;
 
       let randomIndex;
 
@@ -112,9 +116,7 @@ function Home() {
     resetTyping();
 
     if (language === "All") {
-      if (filteredExercises.length === 1) {
-        return;
-      }
+      if (filteredExercises.length === 1) return;
 
       let randomIndex;
 
@@ -183,121 +185,90 @@ function Home() {
   );
 
   const completed = typed === currentExercise.code;
+  const typingProgress = (typed.length / currentExercise.code.length) * 100;
 
   return (
     <main>
       <div className="exercise-content">
         <Header />
 
-        <Filters
-          language={language}
-          setLanguage={handleLanguage}
-          difficulty={difficulty}
-          setDifficulty={handleDifficulty}
+        <div className="top-toolbar">
+          <Filters
+            language={language}
+            setLanguage={handleLanguage}
+            difficulty={difficulty}
+            setDifficulty={handleDifficulty}
+          />
+
+          <Progress
+            current={exerciseIndex + 1}
+            total={filteredExercises.length}
+            typedCharacters={typed.length}
+            totalCharacters={currentExercise.code.length}
+          />
+        </div>
+
+        <div className="exercise-progress-bar">
+          <div
+            className="exercise-progress-fill"
+            style={{ width: `${typingProgress}%` }}
+          />
+
+          <div
+            className="exercise-progress-marker"
+            style={{ left: `${typingProgress}%` }}
+          >
+            {Math.round(typingProgress)}%
+          </div>
+        </div>
+
+        <ExerciseDetails
+          exercise={currentExercise}
         />
 
-        <Progress
-          current={exerciseIndex + 1}
-          total={filteredExercises.length}
-          typedCharacters={typed.length}
-          totalCharacters={currentExercise.code.length}
+        <ExerciseCode
+          code={currentExercise.code}
+          typed={typed}
         />
-
-        <h2>{currentExercise.title}</h2>
-
-        <p>
-          <strong>{currentExercise.language}</strong> •{" "}
-          {currentExercise.category} •{" "}
-          {currentExercise.difficulty}
-        </p>
-
-        <p style={{ margin: "12px 0" }}>
-          {currentExercise.description}
-        </p>
-
-        <pre>
-          <code>
-            {currentExercise.code
-              .split("")
-              .map((character, index) => (
-                <Character
-                  key={index}
-                  expected={character}
-                  typed={typed[index]}
-                />
-              ))}
-          </code>
-        </pre>
 
         <TypingArea
           value={typed}
           setValue={setTyped}
+          disabled={paused}
+          onPause={() => setPaused(true)}
         />
 
-        <div
-          style={{
-            display: "flex",
-            gap: "24px",
-            marginTop: "20px",
-            flexWrap: "wrap",
-          }}
-        >
-          <div>
-            <strong>Correct:</strong>{" "}
-            {correctCharacters} /{" "}
-            {currentExercise.code.length}
-          </div>
+        <ExerciseStats
+          correctCharacters={correctCharacters}
+          totalCharacters={currentExercise.code.length}
+          mistakes={mistakes}
+          accuracy={accuracy}
+          seconds={seconds}
+          wpm={wpm}
+        />
 
-          <div>
-            <strong>Mistakes:</strong>{" "}
-            {mistakes}
-          </div>
-
-          <div>
-            <strong>Accuracy:</strong>{" "}
-            {accuracy}%
-          </div>
-
-          <div>
-            <strong>Time:</strong>{" "}
-            {seconds}s
-          </div>
-
-          <div>
-            <strong>WPM:</strong>{" "}
-            {wpm}
-          </div>
-        </div>
-
-        {!completed && (
-          <div style={{ height: "44px" }} />
-        )}
-
-        {completed && (
-          <p
-            style={{
-              color: "#22c55e",
-              marginTop: "20px",
-              fontWeight: "bold",
-            }}
-          >
-            Exercise Complete!
-          </p>
-        )}
+        <ExerciseResults
+          paused={paused}
+          completed={completed}
+          correctCharacters={correctCharacters}
+          totalCharacters={currentExercise.code.length}
+          mistakes={mistakes}
+          accuracy={accuracy}
+          seconds={seconds}
+          wpm={wpm}
+          onResume={() => setPaused(false)}
+          onSkip={skipExercise}
+          onNext={nextExercise}
+        />
       </div>
 
-      <div className="button-row">
-        <button
-          disabled={!completed}
-          onClick={nextExercise}
-        >
-          Next Exercise
-        </button>
-
-        <button onClick={skipExercise}>
-          Skip
-        </button>
-      </div>
+      {!paused && (
+        <ExerciseButtons
+          completed={completed}
+          onNext={nextExercise}
+          onSkip={skipExercise}
+        />
+      )}
     </main>
   );
 }

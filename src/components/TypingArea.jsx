@@ -1,52 +1,72 @@
 import { useEffect, useRef } from "react";
+import Editor from "@monaco-editor/react";
 
 function TypingArea({
   value,
   setValue,
+  disabled,
+  onPause,
 }) {
-  const textareaRef = useRef(null);
+  const editorRef = useRef(null);
+
+  function handleMount(editor, monaco) {
+    editorRef.current = editor;
+
+    if (!disabled) {
+      editor.focus();
+    }
+
+    editor.addCommand(
+      monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter,
+      () => {
+        onPause?.();
+      }
+    );
+  }
 
   useEffect(() => {
-    textareaRef.current?.focus();
-  }, []);
-
-  function handleChange(event) {
-    setValue(event.target.value);
-  }
-
-  function handleKeyDown(event) {
-    if (event.key === "Tab") {
-      event.preventDefault();
-
-      const textarea = textareaRef.current;
-      const start = textarea.selectionStart;
-      const end = textarea.selectionEnd;
-
-      const updated =
-        value.slice(0, start) +
-        "  " +
-        value.slice(end);
-
-      setValue(updated);
-
-      requestAnimationFrame(() => {
-        textarea.selectionStart = start + 2;
-        textarea.selectionEnd = start + 2;
-      });
+    if (!disabled) {
+      editorRef.current?.focus();
     }
-  }
+  }, [disabled]);
 
   return (
-    <textarea
-      ref={textareaRef}
+    <Editor
+      height="280px"
+      defaultLanguage="javascript"
+      theme="vs-dark"
       value={value}
-      onChange={handleChange}
-      onKeyDown={handleKeyDown}
-      spellCheck={false}
-      autoComplete="off"
-      autoCorrect="off"
-      autoCapitalize="off"
-      placeholder="Type the code exactly as shown..."
+      onChange={(value) => setValue(value ?? "")}
+      onMount={handleMount}
+      options={{
+        minimap: {
+          enabled: false,
+        },
+        lineNumbers: "off",
+        glyphMargin: false,
+        folding: false,
+        scrollBeyondLastLine: false,
+        wordWrap: "on",
+        automaticLayout: true,
+        tabSize: 2,
+        insertSpaces: true,
+        fontSize: 15,
+        fontFamily: "Fira Code, monospace",
+        padding: {
+          top: 16,
+          bottom: 16,
+        },
+        readOnly: disabled,
+        quickSuggestions: false,
+        suggestOnTriggerCharacters: false,
+        parameterHints: {
+          enabled: false,
+        },
+        hover: {
+          enabled: false,
+        },
+        contextmenu: false,
+      }}
     />
   );
 }

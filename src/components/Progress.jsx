@@ -9,13 +9,6 @@ function Progress({
       ? 0
       : Math.round((current / total) * 100);
 
-  const typingPercent =
-    totalCharacters === 0
-      ? 0
-      : Math.round(
-          (typedCharacters / totalCharacters) * 100
-        );
-
   return (
     <section className="progress">
       <div>
@@ -35,11 +28,6 @@ function Progress({
         <p>
           {typedCharacters} / {totalCharacters}
         </p>
-      </div>
-
-      <div>
-        <h3>Typed</h3>
-        <p>{typingPercent}%</p>
       </div>
     </section>
   );
