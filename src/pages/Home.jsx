@@ -19,7 +19,8 @@ import {
 function Home() {
   const [language, setLanguage] = useState("All");
   const [difficulty, setDifficulty] = useState("All");
-  const [exerciseIndex, setExerciseIndex] = useState(0);
+  const [question, setQuestion] = useState("All");
+  const [selectedExerciseId, setSelectedExerciseId] = useState(null);
   const [typed, setTyped] = useState("");
   const [seconds, setSeconds] = useState(0);
   const [started, setStarted] = useState(false);
@@ -31,11 +32,19 @@ function Home() {
         language === "All" || exercise.language === language;
 
       const difficultyMatch =
-        difficulty === "All" || exercise.difficulty === difficulty;
+        difficulty === "All" ||
+        exercise.difficulty === difficulty;
 
       return languageMatch && difficultyMatch;
     });
   }, [language, difficulty]);
+
+  const questions = useMemo(() => {
+    return filteredExercises.map((exercise, index) => ({
+      label: `${exercise.language} #${index + 1}`,
+      value: exercise.id,
+    }));
+  }, [filteredExercises]);
 
   useEffect(() => {
     if (!started || paused) return;
@@ -54,26 +63,35 @@ function Home() {
   }, [typed, started]);
 
   useEffect(() => {
+    if (question !== "All") return;
+
     if (
       language === "All" &&
       filteredExercises.length > 0
     ) {
-      setExerciseIndex(
-        Math.floor(
-          Math.random() * filteredExercises.length
-        )
-      );
-    } else {
-      setExerciseIndex(0);
+      const randomExercise =
+        filteredExercises[
+          Math.floor(
+            Math.random() * filteredExercises.length
+          )
+        ];
+
+      setSelectedExerciseId(randomExercise.id);
+    } else if (filteredExercises.length > 0) {
+      setSelectedExerciseId(filteredExercises[0].id);
     }
-  }, [language, difficulty, filteredExercises.length]);
+  }, [
+    language,
+    difficulty,
+    filteredExercises.length,
+    question,
+  ]);
 
   const currentExercise =
-    filteredExercises.length > 0
-      ? filteredExercises[
-          exerciseIndex % filteredExercises.length
-        ]
-      : null;
+    filteredExercises.find(
+      (exercise) =>
+        exercise.id === selectedExerciseId
+    ) || filteredExercises[0];
 
   function resetTyping() {
     setTyped("");
@@ -87,63 +105,70 @@ function Home() {
     if (typed !== currentExercise.code) return;
 
     resetTyping();
+    setQuestion("All");
 
-    if (language === "All") {
-      if (filteredExercises.length === 1) return;
+    const currentIndex =
+      filteredExercises.findIndex(
+        (exercise) =>
+          exercise.id === currentExercise.id
+      );
 
-      let randomIndex;
+    const next =
+      filteredExercises[
+        currentIndex + 1 >= filteredExercises.length
+          ? 0
+          : currentIndex + 1
+      ];
 
-      do {
-        randomIndex = Math.floor(
-          Math.random() * filteredExercises.length
-        );
-      } while (randomIndex === exerciseIndex);
-
-      setExerciseIndex(randomIndex);
-      return;
-    }
-
-    setExerciseIndex((value) =>
-      value + 1 >= filteredExercises.length
-        ? 0
-        : value + 1
-    );
+    setSelectedExerciseId(next.id);
   }
 
   function skipExercise() {
     if (!currentExercise) return;
 
     resetTyping();
+    setQuestion("All");
 
-    if (language === "All") {
-      if (filteredExercises.length === 1) return;
+    const currentIndex =
+      filteredExercises.findIndex(
+        (exercise) =>
+          exercise.id === currentExercise.id
+      );
 
-      let randomIndex;
+    const next =
+      filteredExercises[
+        currentIndex + 1 >= filteredExercises.length
+          ? 0
+          : currentIndex + 1
+      ];
 
-      do {
-        randomIndex = Math.floor(
-          Math.random() * filteredExercises.length
-        );
-      } while (randomIndex === exerciseIndex);
-
-      setExerciseIndex(randomIndex);
-      return;
-    }
-
-    setExerciseIndex((value) =>
-      value + 1 >= filteredExercises.length
-        ? 0
-        : value + 1
-    );
+    setSelectedExerciseId(next.id);
   }
 
   function handleLanguage(value) {
     setLanguage(value);
+    setDifficulty("All");
+    setQuestion("All");
+    setSelectedExerciseId(null);
     resetTyping();
   }
 
   function handleDifficulty(value) {
     setDifficulty(value);
+    setQuestion("All");
+    setSelectedExerciseId(null);
+    resetTyping();
+  }
+
+  function handleQuestion(value) {
+    setQuestion(value);
+
+    if (value === "All") {
+      resetTyping();
+      return;
+    }
+
+    setSelectedExerciseId(Number(value));
     resetTyping();
   }
 
@@ -157,6 +182,9 @@ function Home() {
           setLanguage={handleLanguage}
           difficulty={difficulty}
           setDifficulty={handleDifficulty}
+          questions={questions}
+          question={question}
+          setQuestion={handleQuestion}
         />
 
         <h2>No exercises found.</h2>
@@ -185,7 +213,15 @@ function Home() {
   );
 
   const completed = typed === currentExercise.code;
-  const typingProgress = (typed.length / currentExercise.code.length) * 100;
+
+  const typingProgress =
+    (typed.length / currentExercise.code.length) * 100;
+
+  const currentNumber =
+    filteredExercises.findIndex(
+      (exercise) =>
+        exercise.id === currentExercise.id
+    ) + 1;
 
   return (
     <main>
@@ -198,10 +234,13 @@ function Home() {
             setLanguage={handleLanguage}
             difficulty={difficulty}
             setDifficulty={handleDifficulty}
+            questions={questions}
+            question={question}
+            setQuestion={handleQuestion}
           />
 
           <Progress
-            current={exerciseIndex + 1}
+            current={currentNumber}
             total={filteredExercises.length}
             typedCharacters={typed.length}
             totalCharacters={currentExercise.code.length}
@@ -222,9 +261,7 @@ function Home() {
           </div>
         </div>
 
-        <ExerciseDetails
-          exercise={currentExercise}
-        />
+        <ExerciseDetails exercise={currentExercise} />
 
         <ExerciseCode
           code={currentExercise.code}

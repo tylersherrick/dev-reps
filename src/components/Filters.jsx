@@ -20,6 +20,9 @@ function Filters({
   setLanguage,
   difficulty,
   setDifficulty,
+  questions,
+  question,
+  setQuestion,
 }) {
   return (
     <section className="filters">
@@ -57,6 +60,42 @@ function Filters({
               : item}
           </option>
         ))}
+      </select>
+
+      <select
+        id="question"
+        value={question}
+        disabled={language === "All"}
+        onChange={(event) =>
+          setQuestion(event.target.value)
+        }
+      >
+        <option value="All">
+          {language === "All"
+            ? "Select Language First"
+            : "Question"}
+        </option>
+
+        {questions.map((item) => {
+          let questionNumber = item.value + 1;
+
+          if (language === "React") {
+            questionNumber = item.value - 1000;
+          }
+
+          if (language === "Express") {
+            questionNumber = item.value - 2000;
+          }
+
+          return (
+            <option
+              key={item.value}
+              value={item.value}
+            >
+              {language} #{questionNumber}
+            </option>
+          );
+        })}
       </select>
     </section>
   );
