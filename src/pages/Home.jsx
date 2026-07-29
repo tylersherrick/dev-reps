@@ -129,6 +129,26 @@ function Home() {
     resetTyping();
     setQuestion("All");
 
+    if (language === "All") {
+      if (filteredExercises.length <= 1) return;
+
+      let randomExercise;
+
+      do {
+        randomExercise =
+          filteredExercises[
+            Math.floor(
+              Math.random() * filteredExercises.length
+            )
+          ];
+      } while (
+        randomExercise.id === currentExercise.id
+      );
+
+      setSelectedExerciseId(randomExercise.id);
+      return;
+    }
+
     const currentIndex =
       filteredExercises.findIndex(
         (exercise) =>
