@@ -1888,19 +1888,320 @@ button:hover {
   top: 0;
   left: 0;
   width: 100%;
-}`})],ee=[y({id:5001,language:`SQL`,category:`Queries`,difficulty:`Beginner`,title:`Select All`,description:``,fileName:`queries.sql`,code:`SELECT *
-FROM users;`}),y({id:5002,language:`SQL`,category:`Filtering`,difficulty:`Beginner`,title:`WHERE Clause`,description:``,fileName:`queries.sql`,code:`SELECT *
+}`})],ee=[y({id:1,language:`SQL`,category:`Queries`,difficulty:`Beginner`,title:`Select All`,description:`Learn how to retrieve every record from a database table. SELECT is the foundation of reading data in SQL and is used constantly in backend applications.`,fileName:`queries.sql`,code:`SELECT *
+FROM users;`}),y({id:2,language:`SQL`,category:`Filtering`,difficulty:`Beginner`,title:`WHERE Clause`,description:`Learn how to filter database results based on conditions. WHERE allows applications to find only the records that match specific requirements.`,fileName:`queries.sql`,code:`SELECT *
 FROM users
-WHERE age >= 18;`}),y({id:5003,language:`SQL`,category:`Sorting`,difficulty:`Beginner`,title:`ORDER BY`,description:``,fileName:`queries.sql`,code:`SELECT *
+WHERE age >= 18;`}),y({id:3,language:`SQL`,category:`Sorting`,difficulty:`Beginner`,title:`ORDER BY`,description:`Learn how to sort query results. ORDER BY is commonly used to display newest records, highest values, or alphabetical results.`,fileName:`queries.sql`,code:`SELECT *
 FROM products
-ORDER BY price DESC;`}),y({id:5004,language:`SQL`,category:`Joining`,difficulty:`Intermediate`,title:`INNER JOIN`,description:``,fileName:`queries.sql`,code:`SELECT users.name,
-       orders.total
+ORDER BY price DESC;`}),y({id:4,language:`SQL`,category:`Joining`,difficulty:`Intermediate`,title:`INNER JOIN`,description:`Learn how to combine related data from multiple tables. JOINs are essential for working with relational databases where information is separated across tables.`,fileName:`queries.sql`,code:`SELECT users.name, orders.total
 FROM users
 JOIN orders
-ON users.id = orders.user_id;`}),y({id:5005,language:`SQL`,category:`Grouping`,difficulty:`Intermediate`,title:`GROUP BY`,description:``,fileName:`queries.sql`,code:`SELECT department,
-       COUNT(*) AS employees
+ON users.id = orders.user_id;`}),y({id:5,language:`SQL`,category:`Grouping`,difficulty:`Intermediate`,title:`GROUP BY`,description:`Learn how to group records together to perform calculations. GROUP BY is commonly used with COUNT, SUM, and AVG to create reports and summaries.`,fileName:`queries.sql`,code:`SELECT department, COUNT(*) AS employees
 FROM staff
-GROUP BY department;`})],T=[...b,...x,...S,...C,...w,...ee],E=o((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.fragment`);function r(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.Fragment=n,e.jsx=r,e.jsxs=r})),D=o(((e,t)=>{t.exports=E()}))();function te(){return(0,D.jsxs)(`header`,{children:[(0,D.jsx)(`h1`,{children:`Dev Reps`}),(0,D.jsx)(`p`,{children:`Build coding muscle memory by typing real code.`})]})}var ne=[`All`,`JavaScript`,`React`,`Express`,`HTML`,`CSS`,`SQL`],re=[`All`,`Beginner`,`Intermediate`,`Advanced`];function ie({language:e,setLanguage:t,difficulty:n,setDifficulty:r,questions:i,question:a,setQuestion:o}){return(0,D.jsxs)(`section`,{className:`filters`,children:[(0,D.jsx)(`select`,{id:`language`,value:e,onChange:e=>t(e.target.value),children:ne.map(e=>(0,D.jsx)(`option`,{value:e,children:e===`All`?`Language`:e},e))}),(0,D.jsx)(`select`,{id:`difficulty`,value:n,onChange:e=>r(e.target.value),children:re.map(e=>(0,D.jsx)(`option`,{value:e,children:e===`All`?`Difficulty`:e},e))}),(0,D.jsxs)(`select`,{id:`question`,value:a,disabled:e===`All`,onChange:e=>o(e.target.value),children:[(0,D.jsx)(`option`,{value:`All`,children:e===`All`?`Select Language First`:`Question`}),i.map(t=>{let n=t.value+1;return e===`React`&&(n=t.value-1e3),e===`Express`&&(n=t.value-2e3),(0,D.jsxs)(`option`,{value:t.value,children:[e,` #`,n]},t.value)})]})]})}function ae({current:e,total:t,typedCharacters:n,totalCharacters:r}){let i=t===0?0:Math.round(e/t*100);return(0,D.jsxs)(`section`,{className:`progress`,children:[(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`h3`,{children:`Exercise`}),(0,D.jsxs)(`p`,{children:[e,` / `,t]})]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`h3`,{children:`Course`}),(0,D.jsxs)(`p`,{children:[i,`%`]})]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`h3`,{children:`Characters`}),(0,D.jsxs)(`p`,{children:[n,` / `,r]})]})]})}function oe(e,t){(t==null||t>e.length)&&(t=e.length);for(var n=0,r=Array(t);n<t;n++)r[n]=e[n];return r}function se(e){if(Array.isArray(e))return e}function O(e,t,n){return(t=me(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function k(e,t){var n=e==null?null:typeof Symbol<`u`&&e[Symbol.iterator]||e[`@@iterator`];if(n!=null){var r,i,a,o,s=[],c=!0,l=!1;try{if(a=(n=n.call(e)).next,t!==0)for(;!(c=(r=a.call(n)).done)&&(s.push(r.value),s.length!==t);c=!0);}catch(e){l=!0,i=e}finally{try{if(!c&&n.return!=null&&(o=n.return(),Object(o)!==o))return}finally{if(l)throw i}}return s}}function ce(){throw TypeError(`Invalid attempt to destructure non-iterable instance.
+GROUP BY department;`}),y({id:6,language:`SQL`,category:`Aggregations`,difficulty:`Intermediate`,title:`COUNT Function`,description:`Use COUNT to determine how many rows exist in a table or match a condition. Aggregate functions are commonly used for reports and analyzing stored data.`,fileName:`queries.sql`,code:`SELECT COUNT(*) AS total_users
+FROM users;`}),y({id:7,language:`SQL`,category:`Aggregations`,difficulty:`Intermediate`,title:`SUM Function`,description:`Use SUM to calculate the total value of a numeric column. This is useful for calculating totals such as revenue, expenses, or quantities.`,fileName:`queries.sql`,code:`SELECT SUM(total) AS total_revenue
+FROM orders;`}),y({id:8,language:`SQL`,category:`Aggregations`,difficulty:`Intermediate`,title:`AVG Function`,description:`Use AVG to calculate the average value from a column. This is commonly used for statistics and performance metrics.`,fileName:`queries.sql`,code:`SELECT AVG(price) AS average_price
+FROM products;`}),y({id:9,language:`SQL`,category:`Filtering`,difficulty:`Intermediate`,title:`Multiple Conditions`,description:`Combine multiple conditions using AND and OR to create more specific filters when querying database records.`,fileName:`queries.sql`,code:`SELECT *
+FROM users
+WHERE age >= 18
+AND active = true;`}),y({id:10,language:`SQL`,category:`Filtering`,difficulty:`Intermediate`,title:`LIKE Operator`,description:`Use LIKE to search for patterns inside text fields. This allows partial matching instead of requiring an exact value.`,fileName:`queries.sql`,code:`SELECT *
+FROM users
+WHERE name LIKE 'A%';`}),y({id:11,language:`SQL`,category:`Filtering`,difficulty:`Intermediate`,title:`IN Operator`,description:`Use IN to match a column against multiple possible values. This is a cleaner alternative to writing several OR conditions.`,fileName:`queries.sql`,code:`SELECT *
+FROM products
+WHERE category IN ('Phone', 'Laptop', 'Tablet');`}),y({id:12,language:`SQL`,category:`Filtering`,difficulty:`Intermediate`,title:`BETWEEN Operator`,description:`Use BETWEEN to filter values within a specific range. It is commonly used with numbers, dates, and other ordered values.`,fileName:`queries.sql`,code:`SELECT *
+FROM orders
+WHERE total BETWEEN 100 AND 500;`}),y({id:13,language:`SQL`,category:`Joining`,difficulty:`Intermediate`,title:`LEFT JOIN`,description:`Use LEFT JOIN to return every record from the first table while including matching records from a related table when available.`,fileName:`queries.sql`,code:`SELECT users.name, orders.total
+FROM users
+LEFT JOIN orders
+ON users.id = orders.user_id;`}),y({id:14,language:`SQL`,category:`Joining`,difficulty:`Advanced`,title:`Multiple Table JOIN`,description:`Combine information from multiple related tables by chaining JOIN statements together using matching keys.`,fileName:`queries.sql`,code:`SELECT users.name, orders.total, products.name
+FROM users
+JOIN orders
+ON users.id = orders.user_id
+JOIN products
+ON orders.product_id = products.id;`}),y({id:15,language:`SQL`,category:`Grouping`,difficulty:`Advanced`,title:`HAVING Clause`,description:`Use HAVING to filter grouped results after aggregate calculations have been performed. HAVING is used with GROUP BY when filtering summary data.`,fileName:`queries.sql`,code:`SELECT department, COUNT(*) AS employees
+FROM staff
+GROUP BY department
+HAVING COUNT(*) > 5;`}),y({id:16,language:`SQL`,category:`Subqueries`,difficulty:`Advanced`,title:`Basic Subquery`,description:`Use a query inside another query to retrieve data based on the result of a separate query.`,fileName:`queries.sql`,code:`SELECT *
+FROM users
+WHERE id IN (
+  SELECT user_id
+  FROM orders
+);`}),y({id:17,language:`SQL`,category:`Subqueries`,difficulty:`Advanced`,title:`Subquery With Aggregate`,description:`Use a subquery with aggregate functions to compare values against calculated results.`,fileName:`queries.sql`,code:`SELECT *
+FROM products
+WHERE price > (
+  SELECT AVG(price)
+  FROM products
+);`}),y({id:18,language:`SQL`,category:`Inserting Data`,difficulty:`Beginner`,title:`INSERT INTO`,description:`Add new records to a database table using INSERT INTO. This is commonly used when creating new application data.`,fileName:`queries.sql`,code:`INSERT INTO users (name, email)
+VALUES ('John Smith', 'john@example.com');`}),y({id:19,language:`SQL`,category:`Updating Data`,difficulty:`Beginner`,title:`UPDATE Statement`,description:`Modify existing records in a database using UPDATE with a WHERE condition to target specific rows.`,fileName:`queries.sql`,code:`UPDATE users
+SET active = true
+WHERE id = 1;`}),y({id:20,language:`SQL`,category:`Deleting Data`,difficulty:`Beginner`,title:`DELETE Statement`,description:`Remove existing records from a table using DELETE. Always use WHERE conditions carefully to avoid deleting unwanted data.`,fileName:`queries.sql`,code:`DELETE FROM users
+WHERE id = 1;`}),y({id:21,language:`SQL`,category:`Database Design`,difficulty:`Intermediate`,title:`CREATE TABLE`,description:`Create a new database table by defining columns, data types, and constraints that control stored data.`,fileName:`schema.sql`,code:`CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  email TEXT UNIQUE
+);`}),y({id:22,language:`SQL`,category:`Database Design`,difficulty:`Intermediate`,title:`Foreign Key`,description:`Create relationships between tables using foreign keys. Foreign keys connect records and maintain data integrity.`,fileName:`schema.sql`,code:`CREATE TABLE orders (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id),
+  total DECIMAL
+);`}),y({id:23,language:`SQL`,category:`Database Design`,difficulty:`Intermediate`,title:`NOT NULL Constraint`,description:`Require a column to always contain a value by using the NOT NULL constraint.`,fileName:`schema.sql`,code:`CREATE TABLE products (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  price DECIMAL NOT NULL
+);`}),y({id:24,language:`SQL`,category:`Database Design`,difficulty:`Intermediate`,title:`UNIQUE Constraint`,description:`Prevent duplicate values in a column by adding a UNIQUE constraint. This is commonly used for emails and usernames.`,fileName:`schema.sql`,code:`CREATE TABLE accounts (
+  id SERIAL PRIMARY KEY,
+  username TEXT UNIQUE
+);`}),y({id:25,language:`SQL`,category:`Transactions`,difficulty:`Advanced`,title:`BEGIN Transaction`,description:`Use transactions to group multiple database operations together so changes can be committed or rolled back safely.`,fileName:`transactions.sql`,code:`BEGIN;
+
+UPDATE accounts
+SET balance = balance - 100
+WHERE id = 1;
+
+COMMIT;`}),y({id:26,language:`SQL`,category:`Database Design`,difficulty:`Intermediate`,title:`ALTER TABLE Add Column`,description:`Modify an existing table structure by adding new columns. ALTER TABLE is used when database requirements change after creation.`,fileName:`schema.sql`,code:`ALTER TABLE users
+ADD COLUMN phone TEXT;`}),y({id:27,language:`SQL`,category:`Database Design`,difficulty:`Intermediate`,title:`ALTER TABLE Rename Column`,description:`Rename existing columns in a table while preserving the stored data.`,fileName:`schema.sql`,code:`ALTER TABLE users
+RENAME COLUMN name TO full_name;`}),y({id:28,language:`SQL`,category:`Conditional Logic`,difficulty:`Intermediate`,title:`CASE Statement`,description:`Use CASE statements to create conditional logic inside SQL queries. This is useful for transforming or categorizing data.`,fileName:`queries.sql`,code:`SELECT name,
+CASE
+  WHEN age >= 18 THEN 'Adult'
+  ELSE 'Minor'
+END AS age_group
+FROM users;`}),y({id:29,language:`SQL`,category:`Pagination`,difficulty:`Intermediate`,title:`LIMIT Clause`,description:`Use LIMIT to control how many rows are returned from a query. This is commonly used for pagination and displaying smaller result sets.`,fileName:`queries.sql`,code:`SELECT *
+FROM products
+LIMIT 10;`}),y({id:30,language:`SQL`,category:`Pagination`,difficulty:`Intermediate`,title:`OFFSET Clause`,description:`Use OFFSET to skip a specific number of rows. OFFSET is commonly paired with LIMIT to build paginated results.`,fileName:`queries.sql`,code:`SELECT *
+FROM products
+LIMIT 10
+OFFSET 20;`}),y({id:31,language:`SQL`,category:`Indexes`,difficulty:`Advanced`,title:`CREATE INDEX`,description:`Create indexes to improve query performance on frequently searched columns.`,fileName:`schema.sql`,code:`CREATE INDEX idx_users_email
+ON users(email);`}),y({id:32,language:`SQL`,category:`Indexes`,difficulty:`Advanced`,title:`DROP INDEX`,description:`Remove an existing index from a database when it is no longer needed or negatively impacts performance.`,fileName:`schema.sql`,code:`DROP INDEX idx_users_email;`}),y({id:33,language:`SQL`,category:`Views`,difficulty:`Advanced`,title:`CREATE VIEW`,description:`Create reusable virtual tables based on saved queries. Views simplify complex queries and improve maintainability.`,fileName:`schema.sql`,code:`CREATE VIEW active_users AS
+SELECT *
+FROM users
+WHERE active = true;`}),y({id:34,language:`SQL`,category:`Transactions`,difficulty:`Advanced`,title:`ROLLBACK Transaction`,description:`Use ROLLBACK to undo changes made during a transaction when an operation fails or should not be saved.`,fileName:`transactions.sql`,code:`BEGIN;
+
+DELETE FROM users
+WHERE id = 1;
+
+ROLLBACK;`}),y({id:35,language:`SQL`,category:`Transactions`,difficulty:`Advanced`,title:`COMMIT Transaction`,description:`Use COMMIT to permanently save changes made during a transaction after all operations complete successfully.`,fileName:`transactions.sql`,code:`BEGIN;
+
+UPDATE accounts
+SET balance = balance + 500
+WHERE id = 1;
+
+COMMIT;`}),y({id:36,language:`SQL`,category:`Common Table Expressions`,difficulty:`Advanced`,title:`Basic CTE`,description:`Use a Common Table Expression (CTE) to create a temporary result set that can make complex queries easier to read and maintain.`,fileName:`queries.sql`,code:`WITH active_users AS (
+  SELECT *
+  FROM users
+  WHERE active = true
+)
+SELECT *
+FROM active_users;`}),y({id:37,language:`SQL`,category:`Common Table Expressions`,difficulty:`Advanced`,title:`CTE With Aggregation`,description:`Use a CTE with aggregate functions to organize calculations before using the results in a final query.`,fileName:`queries.sql`,code:`WITH order_totals AS (
+  SELECT user_id, SUM(total) AS spending
+  FROM orders
+  GROUP BY user_id
+)
+SELECT *
+FROM order_totals;`}),y({id:38,language:`SQL`,category:`Window Functions`,difficulty:`Advanced`,title:`ROW_NUMBER Function`,description:`Use ROW_NUMBER to assign a unique sequential number to each row within a result set.`,fileName:`queries.sql`,code:`SELECT name,
+ROW_NUMBER() OVER (
+  ORDER BY created_at
+) AS row_number
+FROM users;`}),y({id:39,language:`SQL`,category:`Window Functions`,difficulty:`Advanced`,title:`RANK Function`,description:`Use RANK to assign rankings based on ordered values while allowing duplicate ranking positions.`,fileName:`queries.sql`,code:`SELECT name, score, RANK() OVER (ORDER BY score DESC) AS ranking
+FROM players;`}),y({id:40,language:`SQL`,category:`Window Functions`,difficulty:`Advanced`,title:`PARTITION BY`,description:`Use PARTITION BY to divide rows into groups before applying window functions and performing calculations within each group.`,fileName:`queries.sql`,code:`SELECT department, name, salary, AVG(salary) OVER (PARTITION BY department) AS department_average
+FROM employees;`}),y({id:41,language:`SQL`,category:`Handling Data`,difficulty:`Intermediate`,title:`COALESCE Function`,description:`Use COALESCE to replace NULL values with a default value. This helps prevent missing data from causing issues in results.`,fileName:`queries.sql`,code:`SELECT name, COALESCE(phone, 'No Phone') AS phone
+FROM users;`}),y({id:42,language:`SQL`,category:`String Functions`,difficulty:`Intermediate`,title:`CONCAT Function`,description:`Use CONCAT to combine multiple text values together inside a query.`,fileName:`queries.sql`,code:`SELECT CONCAT(first_name, ' ', last_name) AS full_name
+FROM users;`}),y({id:43,language:`SQL`,category:`String Functions`,difficulty:`Intermediate`,title:`UPPER Function`,description:`Use string functions to transform text values. UPPER converts text into uppercase formatting.`,fileName:`queries.sql`,code:`SELECT UPPER(name) AS uppercase_name
+FROM users;`}),y({id:44,language:`SQL`,category:`Date Functions`,difficulty:`Intermediate`,title:`Extract Date Values`,description:`Extract specific parts of date values such as years, months, or days for filtering and reporting.`,fileName:`queries.sql`,code:`SELECT EXTRACT(YEAR FROM created_at) AS signup_year
+FROM users;`}),y({id:45,language:`SQL`,category:`Data Analysis`,difficulty:`Advanced`,title:`Finding Duplicate Records`,description:`Use GROUP BY and HAVING to identify duplicate values stored in a table.`,fileName:`queries.sql`,code:`SELECT email, COUNT(*) AS duplicates
+FROM users
+GROUP BY email
+HAVING COUNT(*) > 1;`}),y({id:46,language:`SQL`,category:`Subqueries`,difficulty:`Advanced`,title:`Basic Subquery`,description:`Use a subquery to run an additional query inside another query and use its result in the outer query.`,fileName:`queries.sql`,code:`SELECT name
+FROM users
+WHERE id IN (
+  SELECT user_id
+  FROM orders
+);`}),y({id:47,language:`SQL`,category:`Subqueries`,difficulty:`Advanced`,title:`Scalar Subquery`,description:`Use a scalar subquery that returns a single value and include that value as part of the query result.`,fileName:`queries.sql`,code:`SELECT name,
+(
+  SELECT COUNT(*)
+  FROM orders
+) AS total_orders
+FROM users;`}),y({id:48,language:`SQL`,category:`Subqueries`,difficulty:`Advanced`,title:`Correlated Subquery`,description:`Use a correlated subquery that references values from the outer query to compare related records.`,fileName:`queries.sql`,code:`SELECT name
+FROM users u
+WHERE EXISTS (
+  SELECT *
+  FROM orders o
+  WHERE o.user_id = u.id
+);`}),y({id:49,language:`SQL`,category:`Common Table Expressions`,difficulty:`Advanced`,title:`Basic CTE`,description:`Use a Common Table Expression to create a temporary result set that can be referenced inside a query.`,fileName:`queries.sql`,code:`WITH active_users AS (
+  SELECT *
+  FROM users
+  WHERE active = true
+)
+SELECT *
+FROM active_users;`}),y({id:50,language:`SQL`,category:`Common Table Expressions`,difficulty:`Advanced`,title:`Multiple CTEs`,description:`Use multiple Common Table Expressions to organize complex queries into smaller reusable sections.`,fileName:`queries.sql`,code:`WITH user_orders AS (
+  SELECT user_id, COUNT(*) AS total
+  FROM orders
+  GROUP BY user_id
+),
+high_value_users AS (
+  SELECT *
+  FROM user_orders
+  WHERE total > 5
+)
+SELECT *
+FROM high_value_users;`}),y({id:51,language:`SQL`,category:`Window Functions`,difficulty:`Advanced`,title:`ROW_NUMBER Function`,description:`Use ROW_NUMBER to assign a unique sequential number to rows within a result set.`,fileName:`queries.sql`,code:`SELECT name,
+ROW_NUMBER() OVER (
+  ORDER BY created_at
+) AS row_number
+FROM users;`}),y({id:52,language:`SQL`,category:`Window Functions`,difficulty:`Advanced`,title:`RANK Function`,description:`Use RANK to assign rankings while allowing tied values to share the same rank.`,fileName:`queries.sql`,code:`SELECT name, score,
+RANK() OVER (
+  ORDER BY score DESC
+) AS ranking
+FROM players;`}),y({id:53,language:`SQL`,category:`Window Functions`,difficulty:`Advanced`,title:`PARTITION BY`,description:`Use PARTITION BY to divide rows into groups while applying window functions independently to each group.`,fileName:`queries.sql`,code:`SELECT department, name,
+ROW_NUMBER() OVER (
+  PARTITION BY department
+  ORDER BY name
+) AS row_number
+FROM employees;`}),y({id:54,language:`SQL`,category:`Database Design`,difficulty:`Intermediate`,title:`Create Table`,description:`Create a new database table by defining columns, data types, and basic constraints.`,fileName:`queries.sql`,code:`CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(255)
+);`}),y({id:55,language:`SQL`,category:`Database Design`,difficulty:`Intermediate`,title:`Adding Constraints`,description:`Add constraints to enforce rules on stored data and maintain database integrity.`,fileName:`queries.sql`,code:`CREATE TABLE products (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  price DECIMAL NOT NULL
+);`}),y({id:56,language:`SQL`,category:`Database Design`,difficulty:`Intermediate`,title:`ALTER TABLE Add Column`,description:`Modify an existing table by adding a new column to store additional information.`,fileName:`queries.sql`,code:`ALTER TABLE users
+ADD COLUMN phone VARCHAR(20);`}),y({id:57,language:`SQL`,category:`Database Design`,difficulty:`Intermediate`,title:`ALTER TABLE Remove Column`,description:`Remove an existing column from a table when the stored data is no longer needed.`,fileName:`queries.sql`,code:`ALTER TABLE users
+DROP COLUMN phone;`}),y({id:58,language:`SQL`,category:`Database Design`,difficulty:`Intermediate`,title:`Create Index`,description:`Create an index to improve query performance when searching or filtering large tables.`,fileName:`queries.sql`,code:`CREATE INDEX idx_users_email
+ON users(email);`}),y({id:59,language:`SQL`,category:`Database Design`,difficulty:`Advanced`,title:`Composite Index`,description:`Create an index using multiple columns to optimize queries that filter by more than one value.`,fileName:`queries.sql`,code:`CREATE INDEX idx_orders_user_date
+ON orders(user_id, created_at);`}),y({id:60,language:`SQL`,category:`Transactions`,difficulty:`Advanced`,title:`Basic Transaction`,description:`Use transactions to group multiple database operations together so they succeed or fail as one unit.`,fileName:`queries.sql`,code:`BEGIN;
+
+UPDATE accounts
+SET balance = balance - 100
+WHERE id = 1;
+
+COMMIT;`}),y({id:61,language:`SQL`,category:`Transactions`,difficulty:`Advanced`,title:`Rollback Transaction`,description:`Use ROLLBACK to undo changes made during a transaction when an operation fails.`,fileName:`queries.sql`,code:`BEGIN;
+
+DELETE FROM orders
+WHERE id = 10;
+
+ROLLBACK;`}),y({id:62,language:`SQL`,category:`Views`,difficulty:`Intermediate`,title:`Create View`,description:`Create a reusable virtual table based on the result of a stored query.`,fileName:`queries.sql`,code:`CREATE VIEW active_users AS
+SELECT id, name
+FROM users
+WHERE active = true;`}),y({id:63,language:`SQL`,category:`Views`,difficulty:`Intermediate`,title:`Query a View`,description:`Retrieve data from a view the same way you would query a normal table.`,fileName:`queries.sql`,code:`SELECT *
+FROM active_users;`}),y({id:64,language:`SQL`,category:`Data Modification`,difficulty:`Intermediate`,title:`UPDATE Multiple Columns`,description:`Update multiple column values in a record using a single UPDATE statement.`,fileName:`queries.sql`,code:`UPDATE users
+SET name = 'John Smith', email = 'john@example.com'
+WHERE id = 1;`}),y({id:65,language:`SQL`,category:`Data Modification`,difficulty:`Intermediate`,title:`DELETE With Conditions`,description:`Delete specific records safely by using conditions that identify the rows to remove.`,fileName:`queries.sql`,code:`DELETE FROM users
+WHERE active = false;`}),y({id:66,language:`SQL`,category:`Data Modification`,difficulty:`Advanced`,title:`INSERT Multiple Rows`,description:`Insert multiple records into a table using a single INSERT statement with multiple value sets.`,fileName:`queries.sql`,code:`INSERT INTO users (name, email)
+VALUES ('John', 'john@example.com'),
+('Sarah', 'sarah@example.com');`}),y({id:67,language:`SQL`,category:`Data Modification`,difficulty:`Advanced`,title:`INSERT From SELECT`,description:`Insert data into one table by selecting records from another existing table.`,fileName:`queries.sql`,code:`INSERT INTO archived_users (name, email)
+SELECT name, email
+FROM users
+WHERE active = false;`}),y({id:68,language:`SQL`,category:`Constraints`,difficulty:`Advanced`,title:`Foreign Key Constraint`,description:`Use foreign keys to create relationships between tables and enforce valid references.`,fileName:`queries.sql`,code:`CREATE TABLE orders (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id),
+  total DECIMAL
+);`}),y({id:69,language:`SQL`,category:`Constraints`,difficulty:`Advanced`,title:`Unique Constraint`,description:`Use UNIQUE constraints to prevent duplicate values from being stored in specific columns.`,fileName:`queries.sql`,code:`CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  email VARCHAR(255) UNIQUE
+);`}),y({id:70,language:`SQL`,category:`Constraints`,difficulty:`Advanced`,title:`CHECK Constraint`,description:`Use CHECK constraints to enforce rules that data must follow before being stored.`,fileName:`queries.sql`,code:`CREATE TABLE products (
+  id SERIAL PRIMARY KEY,
+  price DECIMAL CHECK(price > 0)
+);`}),y({id:71,language:`SQL`,category:`Aggregate Functions`,difficulty:`Intermediate`,title:`AVG Function`,description:`Use AVG to calculate the average value from a numeric column.`,fileName:`queries.sql`,code:`SELECT AVG(price) AS average_price
+FROM products;`}),y({id:72,language:`SQL`,category:`Aggregate Functions`,difficulty:`Intermediate`,title:`MIN and MAX Functions`,description:`Use MIN and MAX to find the smallest and largest values stored in a column.`,fileName:`queries.sql`,code:`SELECT MIN(price) AS lowest_price, MAX(price) AS highest_price
+FROM products;`}),y({id:73,language:`SQL`,category:`Aggregate Functions`,difficulty:`Intermediate`,title:`SUM Function`,description:`Use SUM to calculate the total value of numeric data across multiple records.`,fileName:`queries.sql`,code:`SELECT SUM(total) AS revenue
+FROM orders;`}),y({id:74,language:`SQL`,category:`Conditional Logic`,difficulty:`Intermediate`,title:`CASE Statement`,description:`Use CASE statements to create conditional logic inside SQL queries.`,fileName:`queries.sql`,code:`SELECT name,
+CASE
+  WHEN age >= 18 THEN 'Adult'
+  ELSE 'Minor'
+END AS age_group
+FROM users;`}),y({id:75,language:`SQL`,category:`Conditional Logic`,difficulty:`Advanced`,title:`CASE With Aggregates`,description:`Combine CASE statements with aggregate functions to create conditional summaries.`,fileName:`queries.sql`,code:`SELECT COUNT(*) AS total,
+SUM(CASE WHEN active = true THEN 1 ELSE 0 END) AS active_users
+FROM users;`}),y({id:76,language:`SQL`,category:`Views`,difficulty:`Advanced`,title:`Create View`,description:`Create a reusable virtual table based on the results of a query using a database view.`,fileName:`queries.sql`,code:`CREATE VIEW active_users AS
+SELECT *
+FROM users
+WHERE active = true;`}),y({id:77,language:`SQL`,category:`Views`,difficulty:`Advanced`,title:`Query A View`,description:`Retrieve data from a view the same way you would query a regular table.`,fileName:`queries.sql`,code:`SELECT *
+FROM active_users;`}),y({id:78,language:`SQL`,category:`Subqueries`,difficulty:`Advanced`,title:`Basic Subquery`,description:`Use a query inside another query to retrieve filtered or calculated results.`,fileName:`queries.sql`,code:`SELECT name
+FROM users
+WHERE id IN (
+  SELECT user_id
+  FROM orders
+);`}),y({id:79,language:`SQL`,category:`Subqueries`,difficulty:`Advanced`,title:`Scalar Subquery`,description:`Use a subquery that returns a single value and include it as part of the main query result.`,fileName:`queries.sql`,code:`SELECT name,
+(
+  SELECT COUNT(*)
+  FROM orders
+) AS total_orders
+FROM users;`}),y({id:80,language:`SQL`,category:`Subqueries`,difficulty:`Advanced`,title:`EXISTS Subquery`,description:`Use EXISTS to check whether a subquery returns any matching records.`,fileName:`queries.sql`,code:`SELECT name
+FROM users
+WHERE EXISTS (
+  SELECT *
+  FROM orders
+  WHERE orders.user_id = users.id
+);`}),y({id:81,language:`SQL`,category:`Transactions`,difficulty:`Advanced`,title:`BEGIN Transaction`,description:`Start a transaction to group multiple database operations into a single unit of work.`,fileName:`queries.sql`,code:`BEGIN;
+
+UPDATE accounts
+SET balance = balance - 100
+WHERE id = 1;`}),y({id:82,language:`SQL`,category:`Transactions`,difficulty:`Advanced`,title:`COMMIT Transaction`,description:`Commit a transaction to permanently save changes made during the transaction.`,fileName:`queries.sql`,code:`BEGIN;
+
+UPDATE accounts
+SET balance = balance + 100
+WHERE id = 2;
+
+COMMIT;`}),y({id:83,language:`SQL`,category:`Transactions`,difficulty:`Advanced`,title:`ROLLBACK Transaction`,description:`Rollback a transaction to undo changes when an operation fails or should not be saved.`,fileName:`queries.sql`,code:`BEGIN;
+
+DELETE FROM users
+WHERE id = 10;
+
+ROLLBACK;`}),y({id:84,language:`SQL`,category:`Indexes`,difficulty:`Advanced`,title:`Create Index`,description:`Create an index to improve query performance when searching or filtering large tables.`,fileName:`queries.sql`,code:`CREATE INDEX idx_users_email
+ON users(email);`}),y({id:85,language:`SQL`,category:`Indexes`,difficulty:`Advanced`,title:`Composite Index`,description:`Create an index across multiple columns to optimize queries that filter using multiple values.`,fileName:`queries.sql`,code:`CREATE INDEX idx_orders_user_date
+ON orders(user_id, created_at);`}),y({id:86,language:`SQL`,category:`Indexes`,difficulty:`Advanced`,title:`Drop Index`,description:`Remove an index from a table when it is no longer needed or negatively impacts performance.`,fileName:`queries.sql`,code:`DROP INDEX idx_users_email;`}),y({id:87,language:`SQL`,category:`Database Design`,difficulty:`Intermediate`,title:`One To Many Relationship`,description:`Create relationships where one record in a table can be connected to many records in another table.`,fileName:`queries.sql`,code:`CREATE TABLE posts (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id),
+  title TEXT
+);`}),y({id:88,language:`SQL`,category:`Database Design`,difficulty:`Intermediate`,title:`Many To Many Relationship`,description:`Create a junction table to connect records where multiple items can relate to multiple other items.`,fileName:`queries.sql`,code:`CREATE TABLE users_roles (
+  user_id INTEGER REFERENCES users(id),
+  role_id INTEGER REFERENCES roles(id),
+  PRIMARY KEY(user_id, role_id)
+);`}),y({id:89,language:`SQL`,category:`Database Design`,difficulty:`Advanced`,title:`Normalize Data`,description:`Separate repeated data into related tables to reduce duplication and improve database structure.`,fileName:`queries.sql`,code:`CREATE TABLE customers (
+  id SERIAL PRIMARY KEY,
+  name TEXT
+);
+
+CREATE TABLE orders (
+  id SERIAL PRIMARY KEY,
+  customer_id INTEGER REFERENCES customers(id)
+);`}),y({id:90,language:`SQL`,category:`Database Design`,difficulty:`Advanced`,title:`Cascade Delete`,description:`Use cascading deletes to automatically remove related records when a parent record is deleted.`,fileName:`queries.sql`,code:`CREATE TABLE orders (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id)
+  ON DELETE CASCADE
+);`}),y({id:91,language:`SQL`,category:`Database Administration`,difficulty:`Advanced`,title:`Rename Table`,description:`Rename an existing database table while preserving its stored data.`,fileName:`queries.sql`,code:`ALTER TABLE users
+RENAME TO customers;`}),y({id:92,language:`SQL`,category:`Database Administration`,difficulty:`Advanced`,title:`Add Column`,description:`Add a new column to an existing table when additional data needs to be stored.`,fileName:`queries.sql`,code:`ALTER TABLE users
+ADD COLUMN phone VARCHAR(20);`}),y({id:93,language:`SQL`,category:`Database Administration`,difficulty:`Advanced`,title:`Modify Column`,description:`Change the definition of an existing column to adjust its data type or constraints.`,fileName:`queries.sql`,code:`ALTER TABLE users
+ALTER COLUMN name TYPE VARCHAR(100);`}),y({id:94,language:`SQL`,category:`Database Administration`,difficulty:`Advanced`,title:`Drop Column`,description:`Remove an unused column from an existing table when the data is no longer required.`,fileName:`queries.sql`,code:`ALTER TABLE users
+DROP COLUMN phone;`}),y({id:95,language:`SQL`,category:`Query Optimization`,difficulty:`Advanced`,title:`EXPLAIN Query Plan`,description:`Use EXPLAIN to inspect how the database executes a query and identify possible performance improvements.`,fileName:`queries.sql`,code:`EXPLAIN
+SELECT *
+FROM users
+WHERE email = 'test@example.com';`}),y({id:96,language:`SQL`,category:`Query Optimization`,difficulty:`Advanced`,title:`LIMIT Query Results`,description:`Use LIMIT to restrict the number of rows returned from a query and improve efficiency when working with large datasets.`,fileName:`queries.sql`,code:`SELECT *
+FROM users
+LIMIT 10;`}),y({id:97,language:`SQL`,category:`Query Optimization`,difficulty:`Advanced`,title:`OFFSET Query Results`,description:`Use OFFSET to skip a specific number of rows, commonly used when creating pagination systems.`,fileName:`queries.sql`,code:`SELECT *
+FROM users
+LIMIT 10
+OFFSET 20;`}),y({id:98,language:`SQL`,category:`Advanced Queries`,difficulty:`Advanced`,title:`Common Table Expression`,description:`Use a Common Table Expression (CTE) to create temporary named query results that make complex queries easier to read.`,fileName:`queries.sql`,code:`WITH active_users AS (
+  SELECT *
+  FROM users
+  WHERE active = true
+)
+SELECT *
+FROM active_users;`}),y({id:99,language:`SQL`,category:`Advanced Queries`,difficulty:`Advanced`,title:`Recursive CTE`,description:`Use recursive Common Table Expressions to query hierarchical data such as organizational structures or category trees.`,fileName:`queries.sql`,code:`WITH RECURSIVE employee_tree AS (
+  SELECT id, name
+  FROM employees
+  WHERE manager_id IS NULL
+
+  UNION ALL
+
+  SELECT e.id, e.name
+  FROM employees e
+  JOIN employee_tree t
+  ON e.manager_id = t.id
+)
+SELECT *
+FROM employee_tree;`}),y({id:100,language:`SQL`,category:`Advanced Queries`,difficulty:`Advanced`,title:`Rank Results With Window Function`,description:`Use ranking window functions to assign positions to rows based on sorted values while keeping the original data available.`,fileName:`queries.sql`,code:`SELECT name, salary,
+RANK() OVER (
+  ORDER BY salary DESC
+) AS salary_rank
+FROM employees;`})],T=[...b,...x,...S,...C,...w,...ee],E=o((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.fragment`);function r(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.Fragment=n,e.jsx=r,e.jsxs=r})),D=o(((e,t)=>{t.exports=E()}))();function te(){return(0,D.jsxs)(`header`,{children:[(0,D.jsx)(`h1`,{children:`Dev Reps`}),(0,D.jsx)(`p`,{children:`Build coding muscle memory by typing real code.`})]})}var ne=[`All`,`JavaScript`,`React`,`Express`,`HTML`,`CSS`,`SQL`],re=[`All`,`Beginner`,`Intermediate`,`Advanced`];function ie({language:e,setLanguage:t,difficulty:n,setDifficulty:r,questions:i,question:a,setQuestion:o}){return(0,D.jsxs)(`section`,{className:`filters`,children:[(0,D.jsx)(`select`,{id:`language`,value:e,onChange:e=>t(e.target.value),children:ne.map(e=>(0,D.jsx)(`option`,{value:e,children:e===`All`?`Language`:e},e))}),(0,D.jsx)(`select`,{id:`difficulty`,value:n,onChange:e=>r(e.target.value),children:re.map(e=>(0,D.jsx)(`option`,{value:e,children:e===`All`?`Difficulty`:e},e))}),(0,D.jsxs)(`select`,{id:`question`,value:a,disabled:e===`All`,onChange:e=>o(e.target.value),children:[(0,D.jsx)(`option`,{value:`All`,children:e===`All`?`Select Language First`:`Question`}),i.map((t,n)=>(0,D.jsxs)(`option`,{value:t.value,children:[e,` #`,n+1]},t.value))]})]})}function ae({current:e,total:t,typedCharacters:n,totalCharacters:r}){let i=t===0?0:Math.round(e/t*100);return(0,D.jsxs)(`section`,{className:`progress`,children:[(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`h3`,{children:`Exercise`}),(0,D.jsxs)(`p`,{children:[e,` / `,t]})]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`h3`,{children:`Course`}),(0,D.jsxs)(`p`,{children:[i,`%`]})]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`h3`,{children:`Characters`}),(0,D.jsxs)(`p`,{children:[n,` / `,r]})]})]})}function oe(e,t){(t==null||t>e.length)&&(t=e.length);for(var n=0,r=Array(t);n<t;n++)r[n]=e[n];return r}function se(e){if(Array.isArray(e))return e}function O(e,t,n){return(t=me(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function k(e,t){var n=e==null?null:typeof Symbol<`u`&&e[Symbol.iterator]||e[`@@iterator`];if(n!=null){var r,i,a,o,s=[],c=!0,l=!1;try{if(a=(n=n.call(e)).next,t!==0)for(;!(c=(r=a.call(n)).done)&&(s.push(r.value),s.length!==t);c=!0);}catch(e){l=!0,i=e}finally{try{if(!c&&n.return!=null&&(o=n.return(),Object(o)!==o))return}finally{if(l)throw i}}return s}}function ce(){throw TypeError(`Invalid attempt to destructure non-iterable instance.
 In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`)}function le(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,r)}return n}function ue(e){for(var t=1;t<arguments.length;t++){var n=arguments[t]==null?{}:arguments[t];t%2?le(Object(n),!0).forEach(function(t){O(e,t,n[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):le(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))})}return e}function de(e,t){if(e==null)return{};var n,r,i=fe(e,t);if(Object.getOwnPropertySymbols){var a=Object.getOwnPropertySymbols(e);for(r=0;r<a.length;r++)n=a[r],t.indexOf(n)===-1&&{}.propertyIsEnumerable.call(e,n)&&(i[n]=e[n])}return i}function fe(e,t){if(e==null)return{};var n={};for(var r in e)if({}.hasOwnProperty.call(e,r)){if(t.indexOf(r)!==-1)continue;n[r]=e[r]}return n}function A(e,t){return se(e)||k(e,t)||he(e,t)||ce()}function pe(e,t){if(typeof e!=`object`||!e)return e;var n=e[Symbol.toPrimitive];if(n!==void 0){var r=n.call(e,t);if(typeof r!=`object`)return r;throw TypeError(`@@toPrimitive must return a primitive value.`)}return(t===`string`?String:Number)(e)}function me(e){var t=pe(e,`string`);return typeof t==`symbol`?t:t+``}function he(e,t){if(e){if(typeof e==`string`)return oe(e,t);var n={}.toString.call(e).slice(8,-1);return n===`Object`&&e.constructor&&(n=e.constructor.name),n===`Map`||n===`Set`?Array.from(e):n===`Arguments`||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?oe(e,t):void 0}}function ge(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _e(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,r)}return n}function ve(e){for(var t=1;t<arguments.length;t++){var n=arguments[t]==null?{}:arguments[t];t%2?_e(Object(n),!0).forEach(function(t){ge(e,t,n[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):_e(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))})}return e}function ye(){var e=[...arguments];return function(t){return e.reduceRight(function(e,t){return t(e)},t)}}function be(e){return function t(){var n=this,r=[...arguments];return r.length>=e.length?e.apply(this,r):function(){var e=[...arguments];return t.apply(n,[].concat(r,e))}}}function xe(e){return{}.toString.call(e).includes(`Object`)}function Se(e){return!Object.keys(e).length}function Ce(e){return typeof e==`function`}function we(e,t){return Object.prototype.hasOwnProperty.call(e,t)}function Te(e,t){return xe(t)||Ae(`changeType`),Object.keys(t).some(function(t){return!we(e,t)})&&Ae(`changeField`),t}function Ee(e){Ce(e)||Ae(`selectorType`)}function De(e){Ce(e)||xe(e)||Ae(`handlerType`),xe(e)&&Object.values(e).some(function(e){return!Ce(e)})&&Ae(`handlersType`)}function Oe(e){e||Ae(`initialIsRequired`),xe(e)||Ae(`initialType`),Se(e)&&Ae(`initialContent`)}function ke(e,t){throw Error(e[t]||e.default)}var Ae=be(ke)({initialIsRequired:`initial state is required`,initialType:`initial state should be an object`,initialContent:`initial state shouldn't be an empty object`,handlerType:`handler should be an object or a function`,handlersType:`all handlers should be a functions`,selectorType:`selector should be a function`,changeType:`provided value of changes should be an object`,changeField:`it seams you want to change a field in the state which is not specified in the "initial" state`,default:"an unknown error accured in `state-local` package"}),je={changes:Te,selector:Ee,handler:De,initial:Oe};function Me(e){var t=arguments.length>1&&arguments[1]!==void 0?arguments[1]:{};je.initial(e),je.handler(t);var n={current:e},r=be(Fe)(n,t),i=be(Pe)(n),a=be(je.changes)(e),o=be(Ne)(n);function s(){var e=arguments.length>0&&arguments[0]!==void 0?arguments[0]:function(e){return e};return je.selector(e),e(n.current)}function c(e){ye(r,i,a,o)(e)}return[s,c]}function Ne(e,t){return Ce(t)?t(e.current):t}function Pe(e,t){return e.current=ve(ve({},e.current),t),t}function Fe(e,t,n){return Ce(t)?t(e.current):Object.keys(n).forEach(function(n){return t[n]?.call(t,e.current[n])}),n}var Ie={create:Me},Le={paths:{vs:`https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs`}};function Re(e){return function t(){var n=this,r=[...arguments];return r.length>=e.length?e.apply(this,r):function(){var e=[...arguments];return t.apply(n,[].concat(r,e))}}}function ze(e){return{}.toString.call(e).includes(`Object`)}function Be(e){return e||We(`configIsRequired`),ze(e)||We(`configType`),e.urls?(Ve(),{paths:{vs:e.urls.monacoBase}}):e}function Ve(){console.warn(Ue.deprecation)}function He(e,t){throw Error(e[t]||e.default)}var Ue={configIsRequired:`the configuration object is required`,configType:`the configuration object should be an object`,default:"an unknown error accured in `@monaco-editor/loader` package",deprecation:`Deprecation warning!
     You are using deprecated way of configuration.
 
@@ -1912,4 +2213,4 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     For more please check the link https://github.com/suren-atoyan/monaco-loader#config
   `},We=Re(He)(Ue),Ge={config:Be},Ke=function(){var e=[...arguments];return function(t){return e.reduceRight(function(e,t){return t(e)},t)}};function qe(e,t){return Object.keys(t).forEach(function(n){t[n]instanceof Object&&e[n]&&Object.assign(t[n],qe(e[n],t[n]))}),ue(ue({},e),t)}var Je={type:`cancelation`,msg:`operation is manually canceled`};function Ye(e){var t=!1,n=new Promise(function(n,r){e.then(function(e){return t?r(Je):n(e)}),e.catch(r)});return n.cancel=function(){return t=!0},n}var Xe=[`monaco`],Ze=A(Ie.create({config:Le,isInitialized:!1,resolve:null,reject:null,monaco:null}),2),Qe=Ze[0],$e=Ze[1];function et(e){var t=Ge.config(e),n=t.monaco,r=de(t,Xe);$e(function(e){return{config:qe(e.config,r),monaco:n}})}function tt(){var e=Qe(function(e){return{monaco:e.monaco,isInitialized:e.isInitialized,resolve:e.resolve}});if(!e.isInitialized){if($e({isInitialized:!0}),e.monaco)return e.resolve(e.monaco),Ye(ct);if(window.monaco&&window.monaco.editor)return ot(window.monaco),e.resolve(window.monaco),Ye(ct);Ke(nt,it)(at)}return Ye(ct)}function nt(e){return document.body.appendChild(e)}function rt(e){var t=document.createElement(`script`);return e&&(t.src=e),t}function it(e){var t=Qe(function(e){return{config:e.config,reject:e.reject}}),n=rt(`${t.config.paths.vs}/loader.js`);return n.onload=function(){return e()},n.onerror=t.reject,n}function at(){var e=Qe(function(e){return{config:e.config,resolve:e.resolve,reject:e.reject}}),t=window.require;t.config(e.config),t([`vs/editor/editor.main`],function(t){var n=t.m||t;ot(n),e.resolve(n)},function(t){e.reject(t)})}function ot(e){Qe().monaco||$e({monaco:e})}function st(){return Qe(function(e){return e.monaco})}var ct=new Promise(function(e,t){return $e({resolve:e,reject:t})}),lt={config:et,init:tt,__getMonacoInstance:st},ut={wrapper:{display:`flex`,position:`relative`,textAlign:`initial`},fullWidth:{width:`100%`},hide:{display:`none`}},dt={container:{display:`flex`,height:`100%`,width:`100%`,justifyContent:`center`,alignItems:`center`}};function ft({children:e}){return _.createElement(`div`,{style:dt.container},e)}var pt=ft;function mt({width:e,height:t,isEditorReady:n,loading:r,_ref:i,className:a,wrapperProps:o}){return _.createElement(`section`,{style:{...ut.wrapper,width:e,height:t},...o},!n&&_.createElement(pt,null,r),_.createElement(`div`,{ref:i,style:{...ut.fullWidth,...!n&&ut.hide},className:a}))}var ht=(0,_.memo)(mt);function gt(e){(0,_.useEffect)(e,[])}var _t=gt;function vt(e,t,n=!0){let r=(0,_.useRef)(!0);(0,_.useEffect)(r.current||!n?()=>{r.current=!1}:e,t)}var yt=vt;function bt(){}function xt(e,t,n,r){return St(e,r)||Ct(e,t,n,r)}function St(e,t){return e.editor.getModel(wt(e,t))}function Ct(e,t,n,r){return e.editor.createModel(t,n,r?wt(e,r):void 0)}function wt(e,t){return e.Uri.parse(t)}function Tt({original:e,modified:t,language:n,originalLanguage:r,modifiedLanguage:i,originalModelPath:a,modifiedModelPath:o,keepCurrentOriginalModel:s=!1,keepCurrentModifiedModel:c=!1,theme:l=`light`,loading:u=`Loading...`,options:d={},height:f=`100%`,width:p=`100%`,className:m,wrapperProps:h={},beforeMount:g=bt,onMount:v=bt}){let[y,b]=(0,_.useState)(!1),[x,S]=(0,_.useState)(!0),C=(0,_.useRef)(null),w=(0,_.useRef)(null),ee=(0,_.useRef)(null),T=(0,_.useRef)(v),E=(0,_.useRef)(g),D=(0,_.useRef)(!1);_t(()=>{let e=lt.init();return e.then(e=>(w.current=e)&&S(!1)).catch(e=>e?.type!==`cancelation`&&console.error(`Monaco initialization: error:`,e)),()=>C.current?re():e.cancel()}),yt(()=>{if(C.current&&w.current){let t=C.current.getOriginalEditor(),i=xt(w.current,e||``,r||n||`text`,a||``);i!==t.getModel()&&t.setModel(i)}},[a],y),yt(()=>{if(C.current&&w.current){let e=C.current.getModifiedEditor(),r=xt(w.current,t||``,i||n||`text`,o||``);r!==e.getModel()&&e.setModel(r)}},[o],y),yt(()=>{let e=C.current.getModifiedEditor();e.getOption(w.current.editor.EditorOption.readOnly)?e.setValue(t||``):t!==e.getValue()&&(e.executeEdits(``,[{range:e.getModel().getFullModelRange(),text:t||``,forceMoveMarkers:!0}]),e.pushUndoStop())},[t],y),yt(()=>{C.current?.getModel()?.original.setValue(e||``)},[e],y),yt(()=>{let{original:e,modified:t}=C.current.getModel();w.current.editor.setModelLanguage(e,r||n||`text`),w.current.editor.setModelLanguage(t,i||n||`text`)},[n,r,i],y),yt(()=>{w.current?.editor.setTheme(l)},[l],y),yt(()=>{C.current?.updateOptions(d)},[d],y);let te=(0,_.useCallback)(()=>{if(!w.current)return;E.current(w.current);let s=xt(w.current,e||``,r||n||`text`,a||``),c=xt(w.current,t||``,i||n||`text`,o||``);C.current?.setModel({original:s,modified:c})},[n,t,i,e,r,a,o]),ne=(0,_.useCallback)(()=>{!D.current&&ee.current&&(C.current=w.current.editor.createDiffEditor(ee.current,{automaticLayout:!0,...d}),te(),w.current?.editor.setTheme(l),b(!0),D.current=!0)},[d,l,te]);(0,_.useEffect)(()=>{y&&T.current(C.current,w.current)},[y]),(0,_.useEffect)(()=>{!x&&!y&&ne()},[x,y,ne]);function re(){let e=C.current?.getModel();s||e?.original?.dispose(),c||e?.modified?.dispose(),C.current?.dispose()}return _.createElement(ht,{width:p,height:f,isEditorReady:y,loading:u,_ref:ee,className:m,wrapperProps:h})}(0,_.memo)(Tt);function Et(e){let t=(0,_.useRef)();return(0,_.useEffect)(()=>{t.current=e},[e]),t.current}var j=Et,Dt=new Map;function Ot({defaultValue:e,defaultLanguage:t,defaultPath:n,value:r,language:i,path:a,theme:o=`light`,line:s,loading:c=`Loading...`,options:l={},overrideServices:u={},saveViewState:d=!0,keepCurrentModel:f=!1,width:p=`100%`,height:m=`100%`,className:h,wrapperProps:g={},beforeMount:v=bt,onMount:y=bt,onChange:b,onValidate:x=bt}){let[S,C]=(0,_.useState)(!1),[w,ee]=(0,_.useState)(!0),T=(0,_.useRef)(null),E=(0,_.useRef)(null),D=(0,_.useRef)(null),te=(0,_.useRef)(y),ne=(0,_.useRef)(v),re=(0,_.useRef)(),ie=(0,_.useRef)(r),ae=j(a),oe=(0,_.useRef)(!1),se=(0,_.useRef)(!1);_t(()=>{let e=lt.init();return e.then(e=>(T.current=e)&&ee(!1)).catch(e=>e?.type!==`cancelation`&&console.error(`Monaco initialization: error:`,e)),()=>E.current?k():e.cancel()}),yt(()=>{let o=xt(T.current,e||r||``,t||i||``,a||n||``);o!==E.current?.getModel()&&(d&&Dt.set(ae,E.current?.saveViewState()),E.current?.setModel(o),d&&E.current?.restoreViewState(Dt.get(a)))},[a],S),yt(()=>{E.current?.updateOptions(l)},[l],S),yt(()=>{!E.current||r===void 0||(E.current.getOption(T.current.editor.EditorOption.readOnly)?E.current.setValue(r):r!==E.current.getValue()&&(se.current=!0,E.current.executeEdits(``,[{range:E.current.getModel().getFullModelRange(),text:r,forceMoveMarkers:!0}]),E.current.pushUndoStop(),se.current=!1))},[r],S),yt(()=>{let e=E.current?.getModel();e&&i&&T.current?.editor.setModelLanguage(e,i)},[i],S),yt(()=>{s!==void 0&&E.current?.revealLine(s)},[s],S),yt(()=>{T.current?.editor.setTheme(o)},[o],S);let O=(0,_.useCallback)(()=>{if(!(!D.current||!T.current)&&!oe.current){ne.current(T.current);let c=a||n,f=xt(T.current,r||e||``,t||i||``,c||``);E.current=T.current?.editor.create(D.current,{model:f,automaticLayout:!0,...l},u),d&&E.current.restoreViewState(Dt.get(c)),T.current.editor.setTheme(o),s!==void 0&&E.current.revealLine(s),C(!0),oe.current=!0}},[e,t,n,r,i,a,l,u,d,o,s]);(0,_.useEffect)(()=>{S&&te.current(E.current,T.current)},[S]),(0,_.useEffect)(()=>{!w&&!S&&O()},[w,S,O]),ie.current=r,(0,_.useEffect)(()=>{S&&b&&(re.current?.dispose(),re.current=E.current?.onDidChangeModelContent(e=>{se.current||b(E.current.getValue(),e)}))},[S,b]),(0,_.useEffect)(()=>{if(S){let e=T.current.editor.onDidChangeMarkers(e=>{let t=E.current.getModel()?.uri;if(t&&e.find(e=>e.path===t.path)){let e=T.current.editor.getModelMarkers({resource:t});x?.(e)}});return()=>{e?.dispose()}}return()=>{}},[S,x]);function k(){re.current?.dispose(),f?d&&Dt.set(a,E.current.saveViewState()):E.current.getModel()?.dispose(),E.current.dispose()}return _.createElement(ht,{width:p,height:m,isEditorReady:S,loading:c,_ref:D,className:h,wrapperProps:g})}var kt=(0,_.memo)(Ot);function At({value:e,setValue:t,disabled:n,onPause:r}){let i=(0,_.useRef)(null);function a(e,t){i.current=e,n||e.focus(),e.addCommand(t.KeyMod.CtrlCmd|t.KeyCode.Enter,()=>{r?.()})}return(0,_.useEffect)(()=>{n||i.current?.focus()},[n]),(0,D.jsx)(kt,{height:`280px`,defaultLanguage:`javascript`,theme:`vs-dark`,value:e,onChange:e=>t(e??``),onMount:a,options:{minimap:{enabled:!1},lineNumbers:`off`,glyphMargin:!1,folding:!1,scrollBeyondLastLine:!1,wordWrap:`on`,automaticLayout:!0,tabSize:2,insertSpaces:!0,fontSize:15,fontFamily:`Fira Code, monospace`,padding:{top:16,bottom:16},readOnly:n,quickSuggestions:!1,suggestOnTriggerCharacters:!1,parameterHints:{enabled:!1},hover:{enabled:!1},contextmenu:!1}})}function jt({exercise:e}){return(0,D.jsxs)(D.Fragment,{children:[(0,D.jsx)(`h2`,{children:e.title}),(0,D.jsxs)(`p`,{children:[(0,D.jsx)(`strong`,{children:e.language}),` •`,` `,e.category,` •`,` `,e.difficulty]}),(0,D.jsx)(`div`,{className:`exercise-description`,children:(0,D.jsx)(`p`,{children:e.description})})]})}function Mt({expected:e,typed:t}){let n=`pending`;return t!==void 0&&(n=t===e?`correct`:`incorrect`),e===`
 `?(0,D.jsxs)(D.Fragment,{children:[(0,D.jsx)(`span`,{className:n,children:` `}),(0,D.jsx)(`br`,{})]}):e===` `?(0,D.jsx)(`span`,{className:n,children:`\xA0`}):(0,D.jsx)(`span`,{className:n,children:e})}function Nt({code:e,typed:t}){let n=(0,_.useRef)(null);return(0,_.useEffect)(()=>{if(!n.current)return;let e=t.split(`
-`).length;n.current.scrollTo({top:Math.max(0,(e-4)*24),behavior:`smooth`})},[t]),(0,D.jsx)(`pre`,{ref:n,children:(0,D.jsx)(`code`,{children:e.split(``).map((e,n)=>(0,D.jsx)(Mt,{expected:e,typed:t[n]},n))})})}function Pt({correctCharacters:e,totalCharacters:t,mistakes:n,accuracy:r,seconds:i,wpm:a}){return(0,D.jsxs)(`div`,{style:{display:`flex`,gap:`24px`,marginTop:`20px`,flexWrap:`wrap`},children:[(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Correct:`}),` `,e,` / `,t]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Mistakes:`}),` `,n]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Accuracy:`}),` `,r,`%`]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Time:`}),` `,i,`s`]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`WPM:`}),` `,a]})]})}function Ft({paused:e,completed:t,correctCharacters:n,totalCharacters:r,mistakes:i,accuracy:a,seconds:o,wpm:s,onResume:c,onNext:l}){if(!e)return null;let u=Math.round(n/r*100);return(0,D.jsx)(`div`,{className:`modal-backdrop`,children:(0,D.jsxs)(`div`,{className:`modal`,children:[(0,D.jsx)(`h2`,{children:t?`Exercise Complete!`:`Exercise Paused`}),(0,D.jsxs)(`div`,{className:`results-grid`,children:[(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Time`}),(0,D.jsxs)(`p`,{children:[o,`s`]})]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`WPM`}),(0,D.jsx)(`p`,{children:s})]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Accuracy`}),(0,D.jsxs)(`p`,{children:[a,`%`]})]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Correct`}),(0,D.jsxs)(`p`,{children:[n,` / `,r]})]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Remaining`}),(0,D.jsx)(`p`,{children:r-n})]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Mistakes`}),(0,D.jsx)(`p`,{children:i})]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Progress`}),(0,D.jsxs)(`p`,{children:[u,`%`]})]})]}),(0,D.jsxs)(`div`,{className:`button-row`,children:[(0,D.jsx)(`button`,{onClick:c,children:`Resume`}),(0,D.jsx)(`button`,{disabled:!t,onClick:l,children:`Next Exercise`})]})]})})}function It({completed:e,onNext:t,onSkip:n}){return(0,D.jsxs)(`div`,{className:`button-row`,children:[(0,D.jsx)(`button`,{disabled:!e,onClick:t,children:`Next Exercise`}),(0,D.jsx)(`button`,{onClick:n,children:`Skip`})]})}function Lt(e,t){let n=0,r=Math.min(e.length,t.length);for(let i=0;i<r;i++)e[i]===t[i]&&n++;return n}function Rt(e,t){let n=0,r=Math.min(e.length,t.length);for(let i=0;i<r;i++)e[i]!==t[i]&&n++;return n}function zt(e,t){if(t.length===0)return 100;let n=Lt(e,t);return Math.round(n/t.length*100)}function Bt(e,t){if(t<=0)return 0;let n=t/60;return Math.round(e/5/n)}function Vt(){let[e,t]=(0,_.useState)(`All`),[n,r]=(0,_.useState)(`All`),[i,a]=(0,_.useState)(`All`),[o,s]=(0,_.useState)(null),[c,l]=(0,_.useState)(``),[u,d]=(0,_.useState)(0),[f,p]=(0,_.useState)(!1),[m,h]=(0,_.useState)(!1),g=(0,_.useMemo)(()=>T.filter(t=>{let r=e===`All`||t.language===e,i=n===`All`||t.difficulty===n;return r&&i}),[e,n]),v=(0,_.useMemo)(()=>g.map((e,t)=>({label:`${e.language} #${t+1}`,value:e.id})),[g]);(0,_.useEffect)(()=>{if(!f||m)return;let e=setInterval(()=>{d(e=>e+1)},1e3);return()=>clearInterval(e)},[f,m]),(0,_.useEffect)(()=>{c.length>0&&!f&&p(!0)},[c,f]),(0,_.useEffect)(()=>{if(i===`All`)if(e===`All`&&g.length>0){let e=g[Math.floor(Math.random()*g.length)];s(e.id)}else g.length>0&&s(g[0].id)},[e,n,g.length,i]);let y=g.find(e=>e.id===o)||g[0];function b(){l(``),d(0),p(!1),h(!1)}function x(){if(!y||c!==y.code)return;b(),a(`All`);let e=g.findIndex(e=>e.id===y.id),t=g[e+1>=g.length?0:e+1];s(t.id)}function S(){if(!y)return;if(b(),a(`All`),e===`All`){if(g.length<=1)return;let e;do e=g[Math.floor(Math.random()*g.length)];while(e.id===y.id);s(e.id);return}let t=g.findIndex(e=>e.id===y.id),n=g[t+1>=g.length?0:t+1];s(n.id)}function C(e){t(e),r(`All`),a(`All`),s(null),b()}function w(e){r(e),a(`All`),s(null),b()}function ee(e){if(a(e),e===`All`){b();return}s(Number(e)),b()}if(!y)return(0,D.jsxs)(`main`,{children:[(0,D.jsx)(te,{}),(0,D.jsx)(ie,{language:e,setLanguage:C,difficulty:n,setDifficulty:w,questions:v,question:i,setQuestion:ee}),(0,D.jsx)(`h2`,{children:`No exercises found.`})]});let E=Lt(y.code,c),ne=Rt(y.code,c),re=zt(y.code,c),oe=Bt(E,u),se=c===y.code,O=c.length/y.code.length*100,k=g.findIndex(e=>e.id===y.id)+1;return(0,D.jsxs)(`main`,{children:[(0,D.jsxs)(`div`,{className:`exercise-content`,children:[(0,D.jsx)(te,{}),(0,D.jsxs)(`div`,{className:`top-toolbar`,children:[(0,D.jsx)(ie,{language:e,setLanguage:C,difficulty:n,setDifficulty:w,questions:v,question:i,setQuestion:ee}),(0,D.jsx)(ae,{current:k,total:g.length,typedCharacters:c.length,totalCharacters:y.code.length})]}),(0,D.jsxs)(`div`,{className:`exercise-progress-bar`,children:[(0,D.jsx)(`div`,{className:`exercise-progress-fill`,style:{width:`${O}%`}}),(0,D.jsxs)(`div`,{className:`exercise-progress-marker`,style:{left:`${O}%`},children:[Math.round(O),`%`]})]}),(0,D.jsx)(jt,{exercise:y}),(0,D.jsx)(Nt,{code:y.code,typed:c}),(0,D.jsx)(At,{value:c,setValue:l,disabled:m,onPause:()=>h(!0)}),(0,D.jsx)(Pt,{correctCharacters:E,totalCharacters:y.code.length,mistakes:ne,accuracy:re,seconds:u,wpm:oe}),(0,D.jsx)(Ft,{paused:m,completed:se,correctCharacters:E,totalCharacters:y.code.length,mistakes:ne,accuracy:re,seconds:u,wpm:oe,onResume:()=>h(!1),onSkip:S,onNext:x})]}),!m&&(0,D.jsx)(It,{completed:se,onNext:x,onSkip:S})]})}function Ht(){return(0,D.jsx)(Vt,{})}(0,v.createRoot)(document.getElementById(`root`)).render((0,D.jsx)(_.StrictMode,{children:(0,D.jsx)(Ht,{})}));
+`).length;n.current.scrollTo({top:Math.max(0,(e-4)*24),behavior:`smooth`})},[t]),(0,D.jsx)(`pre`,{ref:n,children:(0,D.jsx)(`code`,{children:e.split(``).map((e,n)=>(0,D.jsx)(Mt,{expected:e,typed:t[n]},n))})})}function Pt({correctCharacters:e,totalCharacters:t,mistakes:n,accuracy:r,seconds:i,wpm:a}){return(0,D.jsxs)(`div`,{style:{display:`flex`,gap:`24px`,marginTop:`20px`,flexWrap:`wrap`},children:[(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Correct:`}),` `,e,` / `,t]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Mistakes:`}),` `,n]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Accuracy:`}),` `,r,`%`]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Time:`}),` `,i,`s`]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`WPM:`}),` `,a]})]})}function Ft({paused:e,completed:t,correctCharacters:n,totalCharacters:r,mistakes:i,accuracy:a,seconds:o,wpm:s,onResume:c,onNext:l}){if(!e)return null;let u=Math.round(n/r*100);return(0,D.jsx)(`div`,{className:`modal-backdrop`,children:(0,D.jsxs)(`div`,{className:`modal`,children:[(0,D.jsx)(`h2`,{children:t?`Exercise Complete!`:`Exercise Paused`}),(0,D.jsxs)(`div`,{className:`results-grid`,children:[(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Time`}),(0,D.jsxs)(`p`,{children:[o,`s`]})]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`WPM`}),(0,D.jsx)(`p`,{children:s})]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Accuracy`}),(0,D.jsxs)(`p`,{children:[a,`%`]})]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Correct`}),(0,D.jsxs)(`p`,{children:[n,` / `,r]})]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Remaining`}),(0,D.jsx)(`p`,{children:r-n})]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Mistakes`}),(0,D.jsx)(`p`,{children:i})]}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`strong`,{children:`Progress`}),(0,D.jsxs)(`p`,{children:[u,`%`]})]})]}),(0,D.jsxs)(`div`,{className:`button-row`,children:[(0,D.jsx)(`button`,{onClick:c,children:`Resume`}),(0,D.jsx)(`button`,{disabled:!t,onClick:l,children:`Next Exercise`})]})]})})}function It({completed:e,onNext:t,onSkip:n}){return(0,D.jsxs)(`div`,{className:`button-row`,children:[(0,D.jsx)(`button`,{disabled:!e,onClick:t,children:`Next Exercise`}),(0,D.jsx)(`button`,{onClick:n,children:`Skip`})]})}function Lt(e,t){let n=0,r=Math.min(e.length,t.length);for(let i=0;i<r;i++)e[i]===t[i]&&n++;return n}function Rt(e,t){let n=0,r=Math.min(e.length,t.length);for(let i=0;i<r;i++)e[i]!==t[i]&&n++;return n}function zt(e,t){if(t.length===0)return 100;let n=Lt(e,t);return Math.round(n/t.length*100)}function Bt(e,t){if(t<=0)return 0;let n=t/60;return Math.round(e/5/n)}function Vt(){let[e,t]=(0,_.useState)(`All`),[n,r]=(0,_.useState)(`All`),[i,a]=(0,_.useState)(`All`),[o,s]=(0,_.useState)(null),[c,l]=(0,_.useState)(``),[u,d]=(0,_.useState)(0),[f,p]=(0,_.useState)(!1),[m,h]=(0,_.useState)(!1),g=(0,_.useMemo)(()=>T.filter(t=>{let r=e===`All`||t.language===e,i=n===`All`||t.difficulty===n;return r&&i}),[e,n]),v=(0,_.useMemo)(()=>g.map((e,t)=>({label:`${e.language} #${t+1}`,value:t})),[g]);(0,_.useEffect)(()=>{if(!f||m)return;let e=setInterval(()=>{d(e=>e+1)},1e3);return()=>clearInterval(e)},[f,m]),(0,_.useEffect)(()=>{c.length>0&&!f&&p(!0)},[c,f]),(0,_.useEffect)(()=>{if(i===`All`&&g.length>0)if(e===`All`){let e=g[Math.floor(Math.random()*g.length)];s(e.id)}else s(g[0].id)},[e,n,g.length,i]);let y=g.find(e=>e.id===o)||g[0];function b(){l(``),d(0),p(!1),h(!1)}function x(){if(!y||c!==y.code)return;b();let e=g.findIndex(e=>e.id===y.id),t=e+1>=g.length?0:e+1,n=g[t];s(n.id),a(String(t))}function S(){if(!y)return;if(b(),e===`All`&&i===`All`){if(g.length<=1)return;let e;do e=g[Math.floor(Math.random()*g.length)];while(e.id===y.id);s(e.id);return}let t=g.findIndex(e=>e.id===y.id),n=t+1>=g.length?0:t+1,r=g[n];s(r.id),a(String(n))}function C(e){t(e),r(`All`),a(`All`),s(null),b()}function w(e){r(e),a(`All`),s(null),b()}function ee(e){if(a(e),e===`All`){b();return}let t=g[Number(e)];s(t.id),b()}if(!y)return(0,D.jsxs)(`main`,{children:[(0,D.jsx)(te,{}),(0,D.jsx)(ie,{language:e,setLanguage:C,difficulty:n,setDifficulty:w,questions:v,question:i,setQuestion:ee}),(0,D.jsx)(`h2`,{children:`No exercises found.`})]});let E=Lt(y.code,c),ne=Rt(y.code,c),re=zt(y.code,c),oe=Bt(E,u),se=c===y.code,O=c.length/y.code.length*100,k=g.findIndex(e=>e.id===y.id)+1;return(0,D.jsxs)(`main`,{children:[(0,D.jsxs)(`div`,{className:`exercise-content`,children:[(0,D.jsx)(te,{}),(0,D.jsxs)(`div`,{className:`top-toolbar`,children:[(0,D.jsx)(ie,{language:e,setLanguage:C,difficulty:n,setDifficulty:w,questions:v,question:i,setQuestion:ee}),(0,D.jsx)(ae,{current:k,total:g.length,typedCharacters:c.length,totalCharacters:y.code.length})]}),(0,D.jsxs)(`div`,{className:`exercise-progress-bar`,children:[(0,D.jsx)(`div`,{className:`exercise-progress-fill`,style:{width:`${O}%`}}),(0,D.jsxs)(`div`,{className:`exercise-progress-marker`,style:{left:`${O}%`},children:[Math.round(O),`%`]})]}),(0,D.jsx)(jt,{exercise:y}),(0,D.jsx)(Nt,{code:y.code,typed:c}),(0,D.jsx)(At,{value:c,setValue:l,disabled:m,onPause:()=>h(!0)}),(0,D.jsx)(Pt,{correctCharacters:E,totalCharacters:y.code.length,mistakes:ne,accuracy:re,seconds:u,wpm:oe}),(0,D.jsx)(Ft,{paused:m,completed:se,correctCharacters:E,totalCharacters:y.code.length,mistakes:ne,accuracy:re,seconds:u,wpm:oe,onResume:()=>h(!1),onSkip:S,onNext:x})]}),!m&&(0,D.jsx)(It,{completed:se,onNext:x,onSkip:S})]})}function Ht(){return(0,D.jsx)(Vt,{})}(0,v.createRoot)(document.getElementById(`root`)).render((0,D.jsx)(_.StrictMode,{children:(0,D.jsx)(Ht,{})}));
