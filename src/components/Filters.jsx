@@ -76,26 +76,14 @@ function Filters({
             : "Question"}
         </option>
 
-        {questions.map((item) => {
-          let questionNumber = item.value + 1;
-
-          if (language === "React") {
-            questionNumber = item.value - 1000;
-          }
-
-          if (language === "Express") {
-            questionNumber = item.value - 2000;
-          }
-
-          return (
-            <option
-              key={item.value}
-              value={item.value}
-            >
-              {language} #{questionNumber}
-            </option>
-          );
-        })}
+        {questions.map((item, index) => (
+          <option
+            key={item.value}
+            value={item.value}
+          >
+            {language} #{index + 1}
+          </option>
+        ))}
       </select>
     </section>
   );

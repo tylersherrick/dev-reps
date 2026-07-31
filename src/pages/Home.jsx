@@ -42,7 +42,7 @@ function Home() {
   const questions = useMemo(() => {
     return filteredExercises.map((exercise, index) => ({
       label: `${exercise.language} #${index + 1}`,
-      value: exercise.id,
+      value: index,
     }));
   }, [filteredExercises]);
 
@@ -65,20 +65,19 @@ function Home() {
   useEffect(() => {
     if (question !== "All") return;
 
-    if (
-      language === "All" &&
-      filteredExercises.length > 0
-    ) {
-      const randomExercise =
-        filteredExercises[
-          Math.floor(
-            Math.random() * filteredExercises.length
-          )
-        ];
+    if (filteredExercises.length > 0) {
+      if (language === "All") {
+        const randomExercise =
+          filteredExercises[
+            Math.floor(
+              Math.random() * filteredExercises.length
+            )
+          ];
 
-      setSelectedExerciseId(randomExercise.id);
-    } else if (filteredExercises.length > 0) {
-      setSelectedExerciseId(filteredExercises[0].id);
+        setSelectedExerciseId(randomExercise.id);
+      } else {
+        setSelectedExerciseId(filteredExercises[0].id);
+      }
     }
   }, [
     language,
@@ -105,7 +104,6 @@ function Home() {
     if (typed !== currentExercise.code) return;
 
     resetTyping();
-    setQuestion("All");
 
     const currentIndex =
       filteredExercises.findIndex(
@@ -113,23 +111,26 @@ function Home() {
           exercise.id === currentExercise.id
       );
 
-    const next =
-      filteredExercises[
-        currentIndex + 1 >= filteredExercises.length
-          ? 0
-          : currentIndex + 1
-      ];
+    const nextIndex =
+      currentIndex + 1 >= filteredExercises.length
+        ? 0
+        : currentIndex + 1;
+
+    const next = filteredExercises[nextIndex];
 
     setSelectedExerciseId(next.id);
+    setQuestion(String(nextIndex));
   }
 
   function skipExercise() {
     if (!currentExercise) return;
 
     resetTyping();
-    setQuestion("All");
 
-    if (language === "All") {
+    if (
+      language === "All" &&
+      question === "All"
+    ) {
       if (filteredExercises.length <= 1) return;
 
       let randomExercise;
@@ -155,14 +156,15 @@ function Home() {
           exercise.id === currentExercise.id
       );
 
-    const next =
-      filteredExercises[
-        currentIndex + 1 >= filteredExercises.length
-          ? 0
-          : currentIndex + 1
-      ];
+    const nextIndex =
+      currentIndex + 1 >= filteredExercises.length
+        ? 0
+        : currentIndex + 1;
+
+    const next = filteredExercises[nextIndex];
 
     setSelectedExerciseId(next.id);
+    setQuestion(String(nextIndex));
   }
 
   function handleLanguage(value) {
@@ -188,7 +190,10 @@ function Home() {
       return;
     }
 
-    setSelectedExerciseId(Number(value));
+    const selectedExercise =
+      filteredExercises[Number(value)];
+
+    setSelectedExerciseId(selectedExercise.id);
     resetTyping();
   }
 
