@@ -10,26 +10,26 @@ function Progress({
       : Math.round((current / total) * 100);
 
   return (
-    <section className="progress">
-      <div>
+    <>
+      <div className="progress-card">
         <h3>Exercise</h3>
         <p>
           {current} / {total}
         </p>
       </div>
 
-      <div>
+      <div className="progress-card">
         <h3>Course</h3>
         <p>{exercisePercent}%</p>
       </div>
 
-      <div>
+      <div className="progress-card">
         <h3>Characters</h3>
         <p>
           {typedCharacters} / {totalCharacters}
         </p>
       </div>
-    </section>
+    </>
   );
 }
 

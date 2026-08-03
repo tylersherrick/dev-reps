@@ -9,6 +9,7 @@ function ExerciseResults({
   wpm,
   onResume,
   onNext,
+  onComplete,
 }) {
   if (!paused) return null;
 
@@ -73,7 +74,10 @@ function ExerciseResults({
 
           <button
             disabled={!completed}
-            onClick={onNext}
+            onClick={() => {
+              onComplete();
+              onNext();
+            }}
           >
             Next Exercise
           </button>

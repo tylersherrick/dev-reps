@@ -9,6 +9,8 @@ import ExerciseCode from "../components/ExerciseCode";
 import ExerciseStats from "../components/ExerciseStats";
 import ExerciseResults from "../components/ExerciseResults";
 import ExerciseButtons from "../components/ExerciseButtons";
+import Streak from "../components/Streak";
+
 import {
   calculateAccuracy,
   calculateWPM,
@@ -25,6 +27,7 @@ function Home() {
   const [seconds, setSeconds] = useState(0);
   const [started, setStarted] = useState(false);
   const [paused, setPaused] = useState(false);
+  const [lastCompleted, setLastCompleted] = useState(false);
 
   const filteredExercises = useMemo(() => {
     return exercises.filter((exercise) => {
@@ -97,6 +100,41 @@ function Home() {
     setSeconds(0);
     setStarted(false);
     setPaused(false);
+  }
+
+  function completeExercise() {
+    const today = new Date().toDateString();
+
+    const savedData =
+      JSON.parse(
+        localStorage.getItem("devRepsProgress")
+      ) || {
+        streak: 0,
+        lastCompleted: null,
+      };
+
+    if (savedData.lastCompleted === today) {
+      return;
+    }
+
+    const yesterday = new Date();
+
+    yesterday.setDate(
+      yesterday.getDate() - 1
+    );
+
+    const newStreak =
+      savedData.lastCompleted === yesterday.toDateString()
+        ? savedData.streak + 1
+        : 1;
+
+    localStorage.setItem(
+      "devRepsProgress",
+      JSON.stringify({
+        streak: newStreak,
+        lastCompleted: today,
+      })
+    );
   }
 
   function nextExercise() {
@@ -264,12 +302,16 @@ function Home() {
             setQuestion={handleQuestion}
           />
 
-          <Progress
-            current={currentNumber}
-            total={filteredExercises.length}
-            typedCharacters={typed.length}
-            totalCharacters={currentExercise.code.length}
-          />
+          <div className="stats-toolbar">
+            <Progress
+              current={currentNumber}
+              total={filteredExercises.length}
+              typedCharacters={typed.length}
+              totalCharacters={currentExercise.code.length}
+            />
+
+            <Streak />
+          </div>
         </div>
 
         <div className="exercise-progress-bar">
@@ -321,6 +363,7 @@ function Home() {
           onResume={() => setPaused(false)}
           onSkip={skipExercise}
           onNext={nextExercise}
+          onComplete={completeExercise}
         />
       </div>
 
