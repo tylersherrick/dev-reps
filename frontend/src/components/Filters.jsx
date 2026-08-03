@@ -38,7 +38,7 @@ function Filters({
             key={item}
             value={item}
           >
-            {item === "All" ? "Language" : item}
+            {item === "All" ? "All Languages" : item}
           </option>
         ))}
       </select>
@@ -56,7 +56,7 @@ function Filters({
             value={item}
           >
             {item === "All"
-              ? "Difficulty"
+              ? "Mixed Difficulty"
               : item}
           </option>
         ))}
