@@ -1838,7 +1838,7 @@ res.send(project);`}),y({id:2047,language:`Express`,category:`Database`,difficul
 
 router.post("/tasks", createTask);
 
-router.delete("/tasks/:id", deleteTask);`})],C=[y({id:3001,language:`HTML`,category:`Structure`,difficulty:`Beginner`,title:`Basic HTML Document`,description:``,fileName:`index.html`,code:`<!DOCTYPE html>
+router.delete("/tasks/:id", deleteTask);`})],C=[y({id:1,language:`HTML`,category:`Structure`,difficulty:`Beginner`,title:`Basic HTML Document`,description:`Learn the basic structure that every HTML webpage starts with. The html element contains the entire page, the head stores information about the page, and the body contains everything users see.`,fileName:`index.html`,code:`<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -1848,46 +1848,426 @@ router.delete("/tasks/:id", deleteTask);`})],C=[y({id:3001,language:`HTML`,categ
 <body>
 
 </body>
-</html>`}),y({id:3002,language:`HTML`,category:`Elements`,difficulty:`Beginner`,title:`Heading and Paragraph`,description:``,fileName:`index.html`,code:`<h1>Welcome</h1>
+</html>`}),y({id:2,language:`HTML`,category:`Text`,difficulty:`Beginner`,title:`Heading Element`,description:`Learn how to create headings in HTML. Heading elements organize content by importance, with h1 being the largest and most important heading.`,fileName:`index.html`,code:`<h1>My First Website</h1>`}),y({id:3,language:`HTML`,category:`Text`,difficulty:`Beginner`,title:`Paragraph Element`,description:`Learn how to display regular text on a webpage. The paragraph element is used for blocks of text such as descriptions, articles, and explanations.`,fileName:`index.html`,code:`<p>Welcome to my website.</p>`}),y({id:4,language:`HTML`,category:`Text`,difficulty:`Beginner`,title:`Multiple Text Elements`,description:`Learn how multiple HTML elements work together. Websites are created by combining different elements to organize and display information.`,fileName:`index.html`,code:`<h1>About Me</h1>
 
-<p>
-  This is my website.
-</p>`}),y({id:3003,language:`HTML`,category:`Links`,difficulty:`Beginner`,title:`Anchor Tag`,description:``,fileName:`index.html`,code:`<a
-  href="https://google.com"
-  target="_blank"
->
-  Google
-</a>`}),y({id:3004,language:`HTML`,category:`Images`,difficulty:`Beginner`,title:`Image`,description:``,fileName:`index.html`,code:`<img
-  src="./images/logo.png"
-  alt="Company Logo"
-/>`}),y({id:3005,language:`HTML`,category:`Lists`,difficulty:`Beginner`,title:`Unordered List`,description:``,fileName:`index.html`,code:`<ul>
+<p>I am learning HTML.</p>`}),y({id:5,language:`HTML`,category:`Links`,difficulty:`Beginner`,title:`Creating a Link`,description:`Learn how to create clickable links using the anchor element. The href attribute tells the browser where the user should go when they click the link.`,fileName:`index.html`,code:`<a href="https://google.com">Visit Google</a>`}),y({id:6,language:`HTML`,category:`Links`,difficulty:`Beginner`,title:`Link Attributes`,description:`Learn how to add extra information to links using attributes. The target attribute controls where the link opens, and the rel attribute provides additional information about the relationship between pages.`,fileName:`index.html`,code:`<a href="https://google.com" target="_blank" rel="noopener">Visit Google</a>`}),y({id:7,language:`HTML`,category:`Images`,difficulty:`Beginner`,title:`Adding an Image`,description:`Learn how to display images on a webpage using the image element. The src attribute tells HTML where the image file is located.`,fileName:`index.html`,code:`<img src="profile.png" />`}),y({id:8,language:`HTML`,category:`Images`,difficulty:`Beginner`,title:`Image Alt Text`,description:`Learn why images should include alternative text. The alt attribute describes the image and helps users understand the content if the image cannot be viewed.`,fileName:`index.html`,code:`<img src="profile.png" alt="Profile picture" />`}),y({id:9,language:`HTML`,category:`Lists`,difficulty:`Beginner`,title:`Unordered List`,description:`Learn how to create lists where the order of items does not matter. The ul element creates the list, and li elements create each item inside the list.`,fileName:`index.html`,code:`<ul>
+  <li>HTML</li>
+  <li>CSS</li>
   <li>JavaScript</li>
-  <li>React</li>
-  <li>Express</li>
-</ul>`})],w=[y({id:4001,language:`CSS`,category:`Selectors`,difficulty:`Beginner`,title:`Class Selector`,description:``,fileName:`styles.css`,code:`.card {
+</ul>`}),y({id:10,language:`HTML`,category:`Lists`,difficulty:`Beginner`,title:`Ordered List`,description:`Learn how to create numbered lists in HTML. The ol element creates the numbered list, and li elements represent each item in the correct order.`,fileName:`index.html`,code:`<ol>
+  <li>Open your editor</li>
+  <li>Create a file</li>
+  <li>Write HTML</li>
+</ol>`}),y({id:11,language:`HTML`,category:`Containers`,difficulty:`Beginner`,title:`Div Element`,description:`Learn how to group HTML elements together using the div element. Divs are commonly used as containers that help organize sections of a webpage and are often styled with CSS.`,fileName:`index.html`,code:`<div>
+  <h1>My Website</h1>
+  <p>Welcome to my page.</p>
+</div>`}),y({id:12,language:`HTML`,category:`Containers`,difficulty:`Beginner`,title:`Span Element`,description:`Learn how to target small pieces of text using the span element. Unlike divs, spans are used for smaller inline sections of content inside other elements.`,fileName:`index.html`,code:`<p>
+  Learn <span>HTML</span> today.
+</p>`}),y({id:13,language:`HTML`,category:`Structure`,difficulty:`Beginner`,title:`Header Element`,description:`Learn how to create the top section of a webpage using the header element. Headers commonly contain titles, logos, or introductory content.`,fileName:`index.html`,code:`<header>
+  <h1>My Website</h1>
+</header>`}),y({id:14,language:`HTML`,category:`Structure`,difficulty:`Beginner`,title:`Main Element`,description:`Learn how to identify the main content of a webpage. The main element represents the primary information users interact with on a page.`,fileName:`index.html`,code:`<main>
+  <h1>Welcome</h1>
+  <p>This is the main content.</p>
+</main>`}),y({id:15,language:`HTML`,category:`Structure`,difficulty:`Beginner`,title:`Footer Element`,description:`Learn how to create the bottom section of a webpage using the footer element. Footers commonly contain information like copyright text, links, or contact details.`,fileName:`index.html`,code:`<footer>
+  <p>Copyright 2026</p>
+</footer>`}),y({id:16,language:`HTML`,category:`Structure`,difficulty:`Beginner`,title:`Navigation Element`,description:`Learn how to create navigation sections using the nav element. Navigation sections usually contain links that help users move between different pages or sections of a website.`,fileName:`index.html`,code:`<nav><a href="/home">Home</a><a href="/about">About</a></nav>`}),y({id:17,language:`HTML`,category:`Structure`,difficulty:`Beginner`,title:`Section Element`,description:`Learn how to divide a webpage into meaningful sections. The section element groups related content together and helps organize larger pages.`,fileName:`index.html`,code:`<section><h2>About Me</h2><p>I am learning HTML.</p></section>`}),y({id:18,language:`HTML`,category:`Structure`,difficulty:`Beginner`,title:`Article Element`,description:`Learn how to create independent pieces of content using the article element. Articles are useful for content like blog posts, news stories, or user posts.`,fileName:`index.html`,code:`<article><h2>My Blog Post</h2><p>This is my article.</p></article>`}),y({id:19,language:`HTML`,category:`Forms`,difficulty:`Beginner`,title:`Basic Form`,description:`Learn how forms collect information from users. The form element creates a section where inputs, buttons, and other controls can be placed.`,fileName:`index.html`,code:`<form><input type="text" /><button>Submit</button></form>`}),y({id:20,language:`HTML`,category:`Forms`,difficulty:`Beginner`,title:`Input Element`,description:`Learn how to create fields where users can enter information. Input elements can collect different types of data depending on the type attribute.`,fileName:`index.html`,code:`<input type="text" placeholder="Enter your name" />`}),y({id:21,language:`HTML`,category:`Forms`,difficulty:`Beginner`,title:`Label Element`,description:`Learn how to describe form inputs using labels. Labels help users understand what information should be entered and improve accessibility by connecting text to specific inputs.`,fileName:`index.html`,code:`<label>Name</label>
+<input type="text" />`}),y({id:22,language:`HTML`,category:`Forms`,difficulty:`Beginner`,title:`Textarea Element`,description:`Learn how to create a larger text field using the textarea element. Textareas are commonly used when users need to enter longer messages or descriptions.`,fileName:`index.html`,code:`<textarea placeholder="Message"></textarea>`}),y({id:23,language:`HTML`,category:`Forms`,difficulty:`Beginner`,title:`Button Element`,description:`Learn how to create buttons in HTML. Buttons allow users to perform actions such as submitting forms or interacting with a webpage.`,fileName:`index.html`,code:`<button>Submit</button>`}),y({id:24,language:`HTML`,category:`Forms`,difficulty:`Beginner`,title:`Form Input Types`,description:`Learn how different input types change what users can enter. HTML provides built-in input types for common information like emails, passwords, and numbers.`,fileName:`index.html`,code:`<input type="email" />
+<input type="password" />`}),y({id:25,language:`HTML`,category:`Tables`,difficulty:`Beginner`,title:`Basic Table`,description:`Learn how to organize information into rows and columns using tables. Tables use table, tr, and td elements to structure data.`,fileName:`index.html`,code:`<table>
+  <tr>
+    <td>Name</td>
+    <td>Age</td>
+  </tr>
+</table>`}),y({id:26,language:`HTML`,category:`Tables`,difficulty:`Beginner`,title:`Table Rows and Cells`,description:`Learn how tables are built using rows and cells. The tr element creates a row, while td elements create the individual pieces of data inside each row.`,fileName:`index.html`,code:`<table>
+  <tr>
+    <td>HTML</td>
+    <td>Beginner</td>
+  </tr>
+  <tr>
+    <td>CSS</td>
+    <td>Intermediate</td>
+  </tr>
+</table>`}),y({id:27,language:`HTML`,category:`Tables`,difficulty:`Beginner`,title:`Table Headers`,description:`Learn how to create table headings using the th element. Header cells describe the information in a column and make tables easier to understand.`,fileName:`index.html`,code:`<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+</table>`}),y({id:28,language:`HTML`,category:`Media`,difficulty:`Beginner`,title:`Audio Element`,description:`Learn how to add audio content to a webpage. The audio element allows browsers to play sound files using built-in controls.`,fileName:`index.html`,code:`<audio controls src="song.mp3"></audio>`}),y({id:29,language:`HTML`,category:`Media`,difficulty:`Beginner`,title:`Video Element`,description:`Learn how to display videos on a webpage. The video element allows users to watch video files directly in the browser.`,fileName:`index.html`,code:`<video controls src="video.mp4"></video>`}),y({id:30,language:`HTML`,category:`Structure`,difficulty:`Beginner`,title:`Complete Page Structure`,description:`Learn how common HTML elements work together to create a complete webpage layout. Semantic elements help organize content so both browsers and developers understand the purpose of each section.`,fileName:`index.html`,code:`<header>My Website</header>
+
+<main>
+  <section>Content</section>
+</main>
+
+<footer>Copyright</footer>`}),y({id:31,language:`HTML`,category:`Attributes`,difficulty:`Beginner`,title:`Class Attribute`,description:`Learn how to add classes to HTML elements. Classes allow you to group elements together and are commonly used with CSS to apply the same styles to multiple elements.`,fileName:`index.html`,code:`<p class="description">Hello World</p>`}),y({id:32,language:`HTML`,category:`Attributes`,difficulty:`Beginner`,title:`ID Attribute`,description:`Learn how to give an element a unique identifier using the id attribute. IDs are commonly used for targeting specific elements with CSS or JavaScript.`,fileName:`index.html`,code:`<h1 id="title">My Website</h1>`}),y({id:33,language:`HTML`,category:`Attributes`,difficulty:`Beginner`,title:`Title Attribute`,description:`Learn how to provide extra information about an element using the title attribute. Browsers display this information when users hover over the element.`,fileName:`index.html`,code:`<p title="More information">Hover over me</p>`}),y({id:34,language:`HTML`,category:`Accessibility`,difficulty:`Beginner`,title:`Accessible Image`,description:`Learn how to make images easier to understand for all users. The alt attribute provides a text description that can be read by screen readers.`,fileName:`index.html`,code:`<img src="logo.png" alt="Company logo" />`}),y({id:35,language:`HTML`,category:`Accessibility`,difficulty:`Beginner`,title:`Accessible Form Label`,description:`Learn how labels improve form accessibility. Connecting labels to inputs helps users understand what information each field requires.`,fileName:`index.html`,code:`<label for="email">Email</label>
+<input id="email" type="email" />`}),y({id:36,language:`HTML`,category:`Attributes`,difficulty:`Beginner`,title:`Data Attributes`,description:`Learn how to store custom information on HTML elements using data attributes. These attributes allow developers to attach extra data that can later be accessed with JavaScript.`,fileName:`index.html`,code:`<button data-user="123">Profile</button>`}),y({id:37,language:`HTML`,category:`Text`,difficulty:`Beginner`,title:`Strong Text`,description:`Learn how to highlight important text using the strong element. Strong text usually represents information that has extra importance on a webpage.`,fileName:`index.html`,code:`<p>This is <strong>important</strong> text.</p>`}),y({id:38,language:`HTML`,category:`Text`,difficulty:`Beginner`,title:`Emphasized Text`,description:`Learn how to emphasize text using the em element. Emphasized text is often displayed differently and helps communicate importance or tone.`,fileName:`index.html`,code:`<p>This is <em>important</em> text.</p>`}),y({id:39,language:`HTML`,category:`Text`,difficulty:`Beginner`,title:`Line Break`,description:`Learn how to create a line break without creating a new paragraph. The br element moves the following content to the next line.`,fileName:`index.html`,code:`Hello<br />World`}),y({id:40,language:`HTML`,category:`Text`,difficulty:`Beginner`,title:`Horizontal Rule`,description:`Learn how to create a visual divider between sections of content. The hr element represents a thematic break between different parts of a page.`,fileName:`index.html`,code:`<hr />`}),y({id:41,language:`HTML`,category:`Text`,difficulty:`Beginner`,title:`Blockquote Element`,description:`Learn how to display quoted content using the blockquote element. Blockquotes are used when showing longer quotes from another source.`,fileName:`index.html`,code:`<blockquote>Learning never stops.</blockquote>`}),y({id:42,language:`HTML`,category:`Text`,difficulty:`Beginner`,title:`Code Element`,description:`Learn how to display small pieces of code using the code element. This element helps identify text that represents programming code.`,fileName:`index.html`,code:`<code>console.log("Hello");</code>`}),y({id:43,language:`HTML`,category:`Text`,difficulty:`Beginner`,title:`Preformatted Text`,description:`Learn how to preserve spacing and formatting using the pre element. This is useful when displaying code blocks or text where spacing matters.`,fileName:`index.html`,code:`<pre>
+Hello
+World
+</pre>`}),y({id:44,language:`HTML`,category:`Text`,difficulty:`Beginner`,title:`Small Text`,description:`Learn how to display less important text using the small element. This is commonly used for notes, disclaimers, or additional information.`,fileName:`index.html`,code:`<small>Copyright 2026</small>`}),y({id:45,language:`HTML`,category:`Text`,difficulty:`Beginner`,title:`Mark Text`,description:`Learn how to highlight text using the mark element. Mark is commonly used to show text that is important or relevant.`,fileName:`index.html`,code:`<p>This is <mark>highlighted</mark> text.</p>`}),y({id:46,language:`HTML`,category:`Text`,difficulty:`Beginner`,title:`Subscript Text`,description:`Learn how to display smaller text below the normal text line using the sub element. Subscripts are commonly used for formulas and scientific notation.`,fileName:`index.html`,code:`<p>H<sub>2</sub>O</p>`}),y({id:47,language:`HTML`,category:`Text`,difficulty:`Beginner`,title:`Superscript Text`,description:`Learn how to display smaller text above the normal text line using the sup element. Superscripts are commonly used for powers and mathematical expressions.`,fileName:`index.html`,code:`<p>X<sup>2</sup></p>`}),y({id:48,language:`HTML`,category:`Lists`,difficulty:`Beginner`,title:`Description List`,description:`Learn how to create lists that contain terms and descriptions. Description lists use dl, dt for the term, and dd for the explanation.`,fileName:`index.html`,code:`<dl>
+  <dt>HTML</dt>
+  <dd>Creates webpage structure.</dd>
+</dl>`}),y({id:49,language:`HTML`,category:`Forms`,difficulty:`Beginner`,title:`Checkbox Input`,description:`Learn how to create checkbox inputs. Checkboxes allow users to select one or more options from a group of choices.`,fileName:`index.html`,code:`<input type="checkbox" />`}),y({id:50,language:`HTML`,category:`Forms`,difficulty:`Beginner`,title:`Radio Input`,description:`Learn how to create radio buttons. Radio inputs allow users to select one option from a group of choices.`,fileName:`index.html`,code:`<input type="radio" name="choice" />`}),y({id:51,language:`HTML`,category:`Forms`,difficulty:`Beginner`,title:`Select Dropdown`,description:`Learn how to create dropdown menus using the select element. Dropdowns allow users to choose one option from a list of available choices.`,fileName:`index.html`,code:`<select>
+  <option>HTML</option>
+  <option>CSS</option>
+</select>`}),y({id:52,language:`HTML`,category:`Forms`,difficulty:`Beginner`,title:`Option Values`,description:`Learn how option elements work inside dropdown menus. The value attribute stores the information that is sent when a user selects an option.`,fileName:`index.html`,code:`<select>
+  <option value="html">HTML</option>
+  <option value="css">CSS</option>
+</select>`}),y({id:53,language:`HTML`,category:`Forms`,difficulty:`Beginner`,title:`Required Input`,description:`Learn how to require users to fill out a field before submitting a form. The required attribute prevents empty form fields from being submitted.`,fileName:`index.html`,code:`<input type="text" required />`}),y({id:54,language:`HTML`,category:`Forms`,difficulty:`Beginner`,title:`Placeholder Text`,description:`Learn how to provide hints inside form inputs using the placeholder attribute. Placeholder text helps users understand what information should be entered.`,fileName:`index.html`,code:`<input type="text" placeholder="Enter name" />`}),y({id:55,language:`HTML`,category:`Forms`,difficulty:`Beginner`,title:`Disabled Input`,description:`Learn how to prevent users from editing a form field using the disabled attribute. Disabled inputs are visible but cannot be changed.`,fileName:`index.html`,code:`<input type="text" disabled />`}),y({id:56,language:`HTML`,category:`Forms`,difficulty:`Beginner`,title:`Form Action`,description:`Learn how forms know where to send information after submission. The action attribute tells the browser where the form data should be sent.`,fileName:`index.html`,code:`<form action="/submit">
+  <input type="text" />
+</form>`}),y({id:57,language:`HTML`,category:`Forms`,difficulty:`Beginner`,title:`Form Method`,description:`Learn how forms send information using methods. The method attribute controls whether data is sent through GET or POST requests.`,fileName:`index.html`,code:`<form method="POST">
+  <input type="text" />
+</form>`}),y({id:58,language:`HTML`,category:`Structure`,difficulty:`Beginner`,title:`Aside Element`,description:`Learn how to add related content using the aside element. Aside sections are commonly used for sidebars, tips, or additional information.`,fileName:`index.html`,code:`<aside>Related Content</aside>`}),y({id:59,language:`HTML`,category:`Structure`,difficulty:`Beginner`,title:`Figure Element`,description:`Learn how to group media content with descriptions using the figure element. Figures are commonly used for images, diagrams, or illustrations.`,fileName:`index.html`,code:`<figure>
+  <img src="image.png" alt="Example" />
+</figure>`}),y({id:60,language:`HTML`,category:`Structure`,difficulty:`Beginner`,title:`Figure Caption`,description:`Learn how to add descriptions to media using the figcaption element. Captions provide additional information about the content inside a figure.`,fileName:`index.html`,code:`<figure>
+  <img src="image.png" alt="Example" />
+  <figcaption>Example Image</figcaption>
+</figure>`}),y({id:61,language:`HTML`,category:`Media`,difficulty:`Beginner`,title:`Video Source Element`,description:`Learn how to provide video files using the source element. Source elements allow you to specify different video files that the browser can choose from.`,fileName:`index.html`,code:`<video controls>
+  <source src="video.mp4" />
+</video>`}),y({id:62,language:`HTML`,category:`Media`,difficulty:`Beginner`,title:`Audio Source Element`,description:`Learn how to provide audio files using the source element. Source elements allow browsers to load supported audio formats.`,fileName:`index.html`,code:`<audio controls>
+  <source src="audio.mp3" />
+</audio>`}),y({id:63,language:`HTML`,category:`Meta`,difficulty:`Beginner`,title:`Page Description`,description:`Learn how to add information about a webpage using meta elements. Meta descriptions help search engines understand what a page is about.`,fileName:`index.html`,code:`<meta name="description" content="My website" />`}),y({id:64,language:`HTML`,category:`Meta`,difficulty:`Beginner`,title:`Viewport Meta Tag`,description:`Learn how to make webpages display correctly on different screen sizes. The viewport meta tag helps create responsive layouts on mobile devices.`,fileName:`index.html`,code:`<meta name="viewport" content="width=device-width, initial-scale=1.0" />`}),y({id:65,language:`HTML`,category:`Structure`,difficulty:`Beginner`,title:`Complete Semantic Layout`,description:`Learn how semantic HTML elements work together to create a clear webpage structure. Semantic elements describe the purpose of each section instead of only acting as containers.`,fileName:`index.html`,code:`<header>Header</header>
+
+<nav>Navigation</nav>
+
+<main>Main Content</main>
+
+<footer>Footer</footer>`}),y({id:66,language:`HTML`,category:`Structure`,difficulty:`Beginner`,title:`Hidden Content`,description:`Learn how to hide elements using the hidden attribute. Hidden content is not displayed by the browser but can still exist in the HTML document.`,fileName:`index.html`,code:`<p hidden>This text is hidden.</p>`}),y({id:67,language:`HTML`,category:`Attributes`,difficulty:`Beginner`,title:`Editable Content`,description:`Learn how to make text editable directly on a webpage. The contenteditable attribute allows users to change the content of an element.`,fileName:`index.html`,code:`<p contenteditable="true">Edit this text.</p>`}),y({id:68,language:`HTML`,category:`Attributes`,difficulty:`Beginner`,title:`Spellcheck Attribute`,description:`Learn how to enable or disable browser spell checking. The spellcheck attribute helps users find spelling mistakes in editable content.`,fileName:`index.html`,code:`<p contenteditable="true" spellcheck="true">Check spelling</p>`}),y({id:69,language:`HTML`,category:`Accessibility`,difficulty:`Beginner`,title:`ARIA Label`,description:`Learn how to provide extra information for assistive technologies using ARIA labels. ARIA attributes help make websites more accessible.`,fileName:`index.html`,code:`<button aria-label="Close menu">X</button>`}),y({id:70,language:`HTML`,category:`Accessibility`,difficulty:`Beginner`,title:`Role Attribute`,description:`Learn how the role attribute describes the purpose of an element. Roles help assistive technologies understand how content should be interpreted.`,fileName:`index.html`,code:`<div role="button">Click Me</div>`}),y({id:71,language:`HTML`,category:`Structure`,difficulty:`Intermediate`,title:`Details Element`,description:`Learn how to create expandable content using the details element. This element allows users to show or hide additional information without using JavaScript.`,fileName:`index.html`,code:`<details>
+  <summary>Learn More</summary>
+  <p>Extra information.</p>
+</details>`}),y({id:72,language:`HTML`,category:`Structure`,difficulty:`Intermediate`,title:`Summary Element`,description:`Learn how to create the clickable title for a details element. The summary element describes the content that will be revealed when expanded.`,fileName:`index.html`,code:`<details>
+  <summary>About HTML</summary>
+</details>`}),y({id:73,language:`HTML`,category:`Forms`,difficulty:`Intermediate`,title:`Date Input`,description:`Learn how to create date fields using HTML inputs. Date inputs provide users with a built-in way to select dates from a calendar interface.`,fileName:`index.html`,code:`<input type="date" />`}),y({id:74,language:`HTML`,category:`Forms`,difficulty:`Intermediate`,title:`Number Input`,description:`Learn how to create number fields using HTML inputs. Number inputs allow users to enter numeric values and can include controls for increasing or decreasing numbers.`,fileName:`index.html`,code:`<input type="number" />`}),y({id:75,language:`HTML`,category:`Forms`,difficulty:`Intermediate`,title:`Range Input`,description:`Learn how to create sliders using the range input. Range inputs allow users to select a value within a specific range.`,fileName:`index.html`,code:`<input type="range" />`}),y({id:76,language:`HTML`,category:`Forms`,difficulty:`Intermediate`,title:`Color Input`,description:`Learn how to allow users to select colors using HTML. Color inputs provide a built-in color picker that users can interact with.`,fileName:`index.html`,code:`<input type="color" />`}),y({id:77,language:`HTML`,category:`Forms`,difficulty:`Intermediate`,title:`File Input`,description:`Learn how to allow users to upload files. File inputs create a button that lets users select files from their device.`,fileName:`index.html`,code:`<input type="file" />`}),y({id:78,language:`HTML`,category:`Forms`,difficulty:`Intermediate`,title:`Password Input`,description:`Learn how to create secure text fields using password inputs. Password fields hide the characters users type to protect sensitive information.`,fileName:`index.html`,code:`<input type="password" />`}),y({id:79,language:`HTML`,category:`Forms`,difficulty:`Intermediate`,title:`Email Input`,description:`Learn how to create email fields using HTML. Email inputs help browsers validate that users enter information in an email format.`,fileName:`index.html`,code:`<input type="email" />`}),y({id:80,language:`HTML`,category:`Forms`,difficulty:`Intermediate`,title:`Search Input`,description:`Learn how to create search fields using HTML. Search inputs are designed for collecting search queries and can provide browser-specific features.`,fileName:`index.html`,code:`<input type="search" />`}),y({id:81,language:`HTML`,category:`Forms`,difficulty:`Intermediate`,title:`Form Grouping`,description:`Learn how to group related form controls using the fieldset element. Fieldsets help organize larger forms and make them easier for users to understand.`,fileName:`index.html`,code:`<fieldset>
+  <legend>Account Info</legend>
+  <input type="text" />
+</fieldset>`}),y({id:82,language:`HTML`,category:`Forms`,difficulty:`Intermediate`,title:`Form Legend`,description:`Learn how to add a title to a group of form fields using the legend element. Legends describe what information a fieldset contains.`,fileName:`index.html`,code:`<fieldset>
+  <legend>Contact Details</legend>
+</fieldset>`}),y({id:83,language:`HTML`,category:`Tables`,difficulty:`Intermediate`,title:`Table Caption`,description:`Learn how to describe tables using the caption element. Captions provide a title or explanation for the data displayed in a table.`,fileName:`index.html`,code:`<table>
+  <caption>Users</caption>
+</table>`}),y({id:84,language:`HTML`,category:`Tables`,difficulty:`Intermediate`,title:`Table Head`,description:`Learn how to organize table headers using the thead element. Table heads group the header rows separately from the main data.`,fileName:`index.html`,code:`<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+</table>`}),y({id:85,language:`HTML`,category:`Tables`,difficulty:`Intermediate`,title:`Table Body`,description:`Learn how to organize table data using the tbody element. Table bodies contain the main rows of information inside a table.`,fileName:`index.html`,code:`<table>
+  <tbody>
+    <tr>
+      <td>HTML</td>
+    </tr>
+  </tbody>
+</table>`}),y({id:86,language:`HTML`,category:`Tables`,difficulty:`Intermediate`,title:`Table Footer`,description:`Learn how to organize the bottom section of a table using the tfoot element. Table footers are commonly used for totals, summaries, or additional table information.`,fileName:`index.html`,code:`<table>
+  <tfoot>
+    <tr>
+      <td>Total</td>
+    </tr>
+  </tfoot>
+</table>`}),y({id:87,language:`HTML`,category:`Tables`,difficulty:`Intermediate`,title:`Table Column Span`,description:`Learn how to make a table cell stretch across multiple columns using the colspan attribute. This is useful when one piece of information should cover more than one column.`,fileName:`index.html`,code:`<table>
+  <tr>
+    <td colspan="2">Title</td>
+  </tr>
+</table>`}),y({id:88,language:`HTML`,category:`Tables`,difficulty:`Intermediate`,title:`Table Row Span`,description:`Learn how to make a table cell stretch across multiple rows using the rowspan attribute. This allows cells to cover more than one row of data.`,fileName:`index.html`,code:`<table>
+  <tr>
+    <td rowspan="2">HTML</td>
+  </tr>
+</table>`}),y({id:89,language:`HTML`,category:`Structure`,difficulty:`Intermediate`,title:`Nested Elements`,description:`Learn how HTML elements can be placed inside other elements. Nesting allows developers to create organized structures and layouts for webpages.`,fileName:`index.html`,code:`<div>
+  <section>
+    <h2>Title</h2>
+  </section>
+</div>`}),y({id:90,language:`HTML`,category:`Structure`,difficulty:`Intermediate`,title:`Complete Website Layout`,description:`Learn how common semantic HTML elements combine to create a complete website structure. This layout uses sections developers commonly build before adding CSS.`,fileName:`index.html`,code:`<header>Header</header>
+
+<nav>Navigation</nav>
+
+<main>
+  <section>Content</section>
+</main>
+
+<footer>Footer</footer>`}),y({id:91,language:`HTML`,category:`Structure`,difficulty:`Intermediate`,title:`HTML Comments`,description:`Learn how to add notes inside HTML code using comments. Comments are ignored by the browser and are useful for explaining code or leaving reminders for developers.`,fileName:`index.html`,code:`<!-- This is a comment -->`}),y({id:92,language:`HTML`,category:`Links`,difficulty:`Intermediate`,title:`Internal Page Link`,description:`Learn how to create links that move users to different sections of the same webpage. Internal links use element IDs as destinations.`,fileName:`index.html`,code:`<a href="#about">About</a>
+
+<section id="about">
+  About Me
+</section>`}),y({id:93,language:`HTML`,category:`Structure`,difficulty:`Intermediate`,title:`HTML Section IDs`,description:`Learn how IDs can identify specific sections of a webpage. IDs create unique names that can be used for links, styling, and JavaScript.`,fileName:`index.html`,code:`<section id="contact">
+  Contact Information
+</section>`}),y({id:94,language:`HTML`,category:`Accessibility`,difficulty:`Intermediate`,title:`Accessible Button`,description:`Learn how to create buttons that are clear and accessible. Buttons should describe the action they perform so all users understand their purpose.`,fileName:`index.html`,code:`<button type="button">
+  Save Changes
+</button>`}),y({id:95,language:`HTML`,category:`Accessibility`,difficulty:`Intermediate`,title:`Language Attribute`,description:`Learn how to define the language of a webpage. The lang attribute helps browsers and assistive technologies understand how to read the content.`,fileName:`index.html`,code:`<html lang="en">`}),y({id:96,language:`HTML`,category:`Structure`,difficulty:`Intermediate`,title:`HTML Template`,description:`Learn how to use a reusable HTML template. Developers often start projects with a standard document structure before adding content and styles.`,fileName:`index.html`,code:`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Website</title>
+</head>
+<body>
+
+</body>
+</html>`}),y({id:97,language:`HTML`,category:`Forms`,difficulty:`Intermediate`,title:`Form Submit Button`,description:`Learn how submit buttons work inside forms. A submit button sends the information entered into a form for processing.`,fileName:`index.html`,code:`<form>
+  <input type="text" />
+  <button type="submit">Submit</button>
+</form>`}),y({id:98,language:`HTML`,category:`Forms`,difficulty:`Intermediate`,title:`Checkbox Group`,description:`Learn how to group multiple checkbox options together. Checkboxes allow users to select multiple choices from available options.`,fileName:`index.html`,code:`<label>
+  <input type="checkbox" />
+  HTML
+</label>
+
+<label>
+  <input type="checkbox" />
+  CSS
+</label>`}),y({id:99,language:`HTML`,category:`Structure`,difficulty:`Intermediate`,title:`Portfolio Page Structure`,description:`Learn how to organize a simple portfolio page using semantic HTML sections. This structure is commonly used before adding CSS styling.`,fileName:`index.html`,code:`<header>
+  My Portfolio
+</header>
+
+<main>
+  <section>Projects</section>
+  <section>About Me</section>
+</main>
+
+<footer>
+  Contact
+</footer>`}),y({id:100,language:`HTML`,category:`Structure`,difficulty:`Intermediate`,title:`Basic Webpage Layout`,description:`Learn how the main parts of a webpage fit together. This final HTML exercise combines common elements used to create a complete webpage foundation.`,fileName:`index.html`,code:`<header>Website Header</header>
+
+<nav>Navigation</nav>
+
+<main>
+  <article>Main Content</article>
+</main>
+
+<footer>Website Footer</footer>`})],w=[y({id:1,language:`CSS`,category:`Selectors`,difficulty:`Beginner`,title:`Element Selector`,description:`Learn how CSS selects HTML elements to apply styles. This selector targets every paragraph on the page and changes how the text appears.`,fileName:`styles.css`,code:`p {
+  color: blue;
+}`}),y({id:2,language:`CSS`,category:`Selectors`,difficulty:`Beginner`,title:`Class Selector`,description:`Learn how to style specific groups of elements using classes. A class selector allows you to apply the same design choices to multiple elements, such as cards, buttons, or sections.`,fileName:`styles.css`,code:`.card {
   background: white;
-  border-radius: 8px;
-  padding: 16px;
-}`}),y({id:4002,language:`CSS`,category:`Flexbox`,difficulty:`Beginner`,title:`Centered Flexbox`,description:``,fileName:`styles.css`,code:`.container {
+}`}),y({id:3,language:`CSS`,category:`Selectors`,difficulty:`Beginner`,title:`ID Selector`,description:`Learn how to target one unique element using an ID selector. IDs are used when a single element needs its own specific styling.`,fileName:`styles.css`,code:`#header {
+  background: black;
+}`}),y({id:4,language:`CSS`,category:`Colors`,difficulty:`Beginner`,title:`Text Color`,description:`Learn how to change the color of text on a webpage. The color property controls the appearance of words, headings, and other text elements.`,fileName:`styles.css`,code:`h1 {
+  color: green;
+}`}),y({id:5,language:`CSS`,category:`Colors`,difficulty:`Beginner`,title:`Background Color`,description:`Learn how to change the background color of an element. Background colors are used to create sections, cards, buttons, and visual areas on a webpage.`,fileName:`styles.css`,code:`.box {
+  background-color: lightgray;
+}`}),y({id:6,language:`CSS`,category:`Typography`,difficulty:`Beginner`,title:`Font Size`,description:`Learn how to control the size of text on a webpage. The font-size property changes how large or small text appears, helping create titles, headings, and readable paragraphs.`,fileName:`styles.css`,code:`h1 {
+  font-size: 32px;
+}`}),y({id:7,language:`CSS`,category:`Typography`,difficulty:`Beginner`,title:`Font Family`,description:`Learn how to change the style of text using different fonts. The font-family property controls the appearance of letters and helps create different visual styles.`,fileName:`styles.css`,code:`body {
+  font-family: Arial;
+}`}),y({id:8,language:`CSS`,category:`Typography`,difficulty:`Beginner`,title:`Font Weight`,description:`Learn how to make text appear lighter or heavier. The font-weight property controls how bold text looks on a webpage.`,fileName:`styles.css`,code:`h2 {
+  font-weight: bold;
+}`}),y({id:9,language:`CSS`,category:`Spacing`,difficulty:`Beginner`,title:`Margin`,description:`Learn how to add space around an element. Margin creates distance between an element and the other elements around it, helping organize the layout of a page.`,fileName:`styles.css`,code:`.card {
+  margin: 20px;
+}`}),y({id:10,language:`CSS`,category:`Spacing`,difficulty:`Beginner`,title:`Padding`,description:`Learn how to add space inside an element. Padding creates room between the content and the edge of a box, making cards, buttons, and sections easier to read.`,fileName:`styles.css`,code:`.card {
+  padding: 20px;
+}`}),y({id:11,language:`CSS`,category:`Spacing`,difficulty:`Beginner`,title:`Border`,description:`Learn how to add visible edges around elements. The border property creates lines around boxes, cards, and sections to help separate content visually.`,fileName:`styles.css`,code:`.card {
+  border: 1px solid black;
+}`}),y({id:12,language:`CSS`,category:`Spacing`,difficulty:`Beginner`,title:`Border Radius`,description:`Learn how to round the corners of elements. The border-radius property creates softer shapes and is commonly used for cards, buttons, and profile images.`,fileName:`styles.css`,code:`.card {
+  border-radius: 12px;
+}`}),y({id:13,language:`CSS`,category:`Sizing`,difficulty:`Beginner`,title:`Width`,description:`Learn how to control the horizontal size of an element. The width property determines how much space an element takes from left to right.`,fileName:`styles.css`,code:`.box {
+  width: 300px;
+}`}),y({id:14,language:`CSS`,category:`Sizing`,difficulty:`Beginner`,title:`Height`,description:`Learn how to control the vertical size of an element. The height property determines how much space an element takes from top to bottom.`,fileName:`styles.css`,code:`.box {
+  height: 200px;
+}`}),y({id:15,language:`CSS`,category:`Sizing`,difficulty:`Beginner`,title:`Max Width`,description:`Learn how to limit how wide an element can become. Max-width is commonly used to keep content readable and prevent sections from stretching too far across large screens.`,fileName:`styles.css`,code:`.container {
+  max-width: 1200px;
+}`}),y({id:16,language:`CSS`,category:`Sizing`,difficulty:`Beginner`,title:`Min Width`,description:`Learn how to set the smallest width an element can have. Min-width helps prevent elements from becoming too small and keeps layouts easier to read.`,fileName:`styles.css`,code:`.box {
+  min-width: 200px;
+}`}),y({id:17,language:`CSS`,category:`Sizing`,difficulty:`Beginner`,title:`Min Height`,description:`Learn how to set the smallest height an element can have. Min-height ensures a section always has enough vertical space even when there is less content.`,fileName:`styles.css`,code:`.section {
+  min-height: 300px;
+}`}),y({id:18,language:`CSS`,category:`Backgrounds`,difficulty:`Beginner`,title:`Background Image`,description:`Learn how to add images behind webpage content. Background images are commonly used for hero sections, banners, and decorative areas.`,fileName:`styles.css`,code:`.hero {
+  background-image: url("image.jpg");
+}`}),y({id:19,language:`CSS`,category:`Backgrounds`,difficulty:`Beginner`,title:`Background Size`,description:`Learn how to control how a background image fits inside an element. The background-size property helps images fill areas correctly without looking stretched.`,fileName:`styles.css`,code:`.hero {
+  background-size: cover;
+}`}),y({id:20,language:`CSS`,category:`Backgrounds`,difficulty:`Beginner`,title:`Background Position`,description:`Learn how to control where a background image appears inside an element. This helps position important parts of images in the correct location.`,fileName:`styles.css`,code:`.hero {
+  background-position: center;
+}`}),y({id:21,language:`CSS`,category:`Display`,difficulty:`Beginner`,title:`Display Block`,description:`Learn how block elements take up the full available width and start on a new line. The display property controls how elements behave in the page layout.`,fileName:`styles.css`,code:`.box {
+  display: block;
+}`}),y({id:22,language:`CSS`,category:`Display`,difficulty:`Beginner`,title:`Display Inline`,description:`Learn how inline elements stay on the same line as other content. Inline elements only take up the space they need instead of creating a new row.`,fileName:`styles.css`,code:`.text {
+  display: inline;
+}`}),y({id:23,language:`CSS`,category:`Display`,difficulty:`Beginner`,title:`Display None`,description:`Learn how to completely hide elements from the page. Display none removes the element from the layout so it no longer takes up space.`,fileName:`styles.css`,code:`.hidden {
+  display: none;
+}`}),y({id:24,language:`CSS`,category:`Display`,difficulty:`Beginner`,title:`Inline Block`,description:`Learn how inline-block combines features of inline and block elements. It allows elements to sit next to each other while still accepting width and height values.`,fileName:`styles.css`,code:`.card {
+  display: inline-block;
+  width: 200px;
+}`}),y({id:25,language:`CSS`,category:`Opacity`,difficulty:`Beginner`,title:`Element Opacity`,description:`Learn how to control how transparent an element appears. Opacity values between 0 and 1 change how much of the element is visible.`,fileName:`styles.css`,code:`.image {
+  opacity: 0.5;
+}`}),y({id:26,language:`CSS`,category:`Box Model`,difficulty:`Beginner`,title:`Box Sizing`,description:`Learn how CSS calculates the size of elements. The box-sizing property controls whether padding and borders are included inside an element's width and height.`,fileName:`styles.css`,code:`.box {
+  box-sizing: border-box;
+}`}),y({id:27,language:`CSS`,category:`Box Model`,difficulty:`Beginner`,title:`Content Box`,description:`Learn about the default box model behavior in CSS. Content-box means the width and height only apply to the content, while padding and borders are added separately.`,fileName:`styles.css`,code:`.box {
+  box-sizing: content-box;
+}`}),y({id:28,language:`CSS`,category:`Shadows`,difficulty:`Beginner`,title:`Box Shadow`,description:`Learn how to add depth to elements using shadows. Box shadows are commonly used on cards, buttons, and containers to make them stand out from the background.`,fileName:`styles.css`,code:`.card {
+  box-shadow: 0 4px 8px gray;
+}`}),y({id:29,language:`CSS`,category:`Shadows`,difficulty:`Beginner`,title:`Text Shadow`,description:`Learn how to add shadows to text. Text shadows can create depth and improve the visual style of headings and other important text.`,fileName:`styles.css`,code:`h1 {
+  text-shadow: 2px 2px gray;
+}`}),y({id:30,language:`CSS`,category:`Typography`,difficulty:`Beginner`,title:`Text Alignment`,description:`Learn how to control where text appears inside an element. Text alignment can position content to the left, center, or right side of a section.`,fileName:`styles.css`,code:`h1 {
+  text-align: center;
+}`}),y({id:31,language:`CSS`,category:`Typography`,difficulty:`Beginner`,title:`Text Decoration`,description:`Learn how to add or remove decorative lines from text. The text-decoration property is commonly used for links, headings, and highlighting important text.`,fileName:`styles.css`,code:`a {
+  text-decoration: none;
+}`}),y({id:32,language:`CSS`,category:`Typography`,difficulty:`Beginner`,title:`Text Transform`,description:`Learn how to change the capitalization of text without editing the HTML. The text-transform property can make text uppercase, lowercase, or capitalize each word.`,fileName:`styles.css`,code:`.title {
+  text-transform: uppercase;
+}`}),y({id:33,language:`CSS`,category:`Typography`,difficulty:`Beginner`,title:`Letter Spacing`,description:`Learn how to control the space between individual letters. Letter spacing can make headings feel more open or compressed.`,fileName:`styles.css`,code:`h1 {
+  letter-spacing: 2px;
+}`}),y({id:34,language:`CSS`,category:`Typography`,difficulty:`Beginner`,title:`Line Height`,description:`Learn how to control the vertical spacing between lines of text. Line height helps make paragraphs easier to read by adding or reducing space between lines.`,fileName:`styles.css`,code:`p {
+  line-height: 1.5;
+}`}),y({id:35,language:`CSS`,category:`Typography`,difficulty:`Beginner`,title:`Text Overflow`,description:`Learn how to handle text that is too large to fit inside a container. Text overflow properties help control how extra content is displayed.`,fileName:`styles.css`,code:`.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}`}),y({id:36,language:`CSS`,category:`Selectors`,difficulty:`Beginner`,title:`Universal Selector`,description:`Learn how to select every element on a webpage using the universal selector. This is commonly used for applying global styles or resetting default browser spacing.`,fileName:`styles.css`,code:`* {
+  margin: 0;
+  padding: 0;
+}`}),y({id:37,language:`CSS`,category:`Selectors`,difficulty:`Beginner`,title:`Multiple Selectors`,description:`Learn how to apply the same styles to multiple elements at once. Multiple selectors allow you to avoid repeating the same CSS rules.`,fileName:`styles.css`,code:`h1, p {
+  color: black;
+}`}),y({id:38,language:`CSS`,category:`Selectors`,difficulty:`Beginner`,title:`Nested Selector`,description:`Learn how to target elements based on where they appear inside other elements. Nested selectors allow you to style specific parts of a page structure.`,fileName:`styles.css`,code:`.card p {
+  color: gray;
+}`}),y({id:39,language:`CSS`,category:`Selectors`,difficulty:`Beginner`,title:`Child Selector`,description:`Learn how to target direct children of an element. The child selector gives more control over which nested elements receive styles.`,fileName:`styles.css`,code:`.menu > li {
+  list-style: none;
+}`}),y({id:40,language:`CSS`,category:`Selectors`,difficulty:`Beginner`,title:`Attribute Selector`,description:`Learn how to select elements based on their attributes. Attribute selectors allow you to style elements with specific HTML properties.`,fileName:`styles.css`,code:`input[type="text"] {
+  border: 1px solid gray;
+}`}),y({id:41,language:`CSS`,category:`Pseudo Classes`,difficulty:`Intermediate`,title:`Hover State`,description:`Learn how to change the appearance of an element when a user moves their mouse over it. The hover pseudo-class is commonly used for buttons, links, and interactive elements.`,fileName:`styles.css`,code:`button:hover {
+  background: blue;
+}`}),y({id:42,language:`CSS`,category:`Pseudo Classes`,difficulty:`Intermediate`,title:`Focus State`,description:`Learn how to style elements when they are selected or focused. Focus states are important for forms and keyboard accessibility because they show users where they are interacting.`,fileName:`styles.css`,code:`input:focus {
+  border-color: blue;
+}`}),y({id:43,language:`CSS`,category:`Pseudo Classes`,difficulty:`Intermediate`,title:`First Child`,description:`Learn how to style the first element inside a group. The first-child pseudo-class allows you to apply unique styles without adding extra classes.`,fileName:`styles.css`,code:`li:first-child {
+  color: red;
+}`}),y({id:44,language:`CSS`,category:`Pseudo Classes`,difficulty:`Intermediate`,title:`Last Child`,description:`Learn how to style the final element inside a group. The last-child pseudo-class is useful when the last item needs different spacing or styling.`,fileName:`styles.css`,code:`li:last-child {
+  margin-bottom: 0;
+}`}),y({id:45,language:`CSS`,category:`Pseudo Classes`,difficulty:`Intermediate`,title:`Nth Child`,description:`Learn how to select elements by their position in a group. The nth-child pseudo-class lets you target specific items without adding additional classes.`,fileName:`styles.css`,code:`li:nth-child(2) {
+  color: green;
+}`}),y({id:46,language:`CSS`,category:`Pseudo Elements`,difficulty:`Intermediate`,title:`Before Element`,description:`Learn how to create extra content before an element without adding more HTML. The before pseudo-element is commonly used for icons, decorations, and visual effects.`,fileName:`styles.css`,code:`.title::before {
+  content: "★";
+}`}),y({id:47,language:`CSS`,category:`Pseudo Elements`,difficulty:`Intermediate`,title:`After Element`,description:`Learn how to create extra content after an element without changing the HTML. The after pseudo-element is commonly used for decorative details and small additions.`,fileName:`styles.css`,code:`.title::after {
+  content: "→";
+}`}),y({id:48,language:`CSS`,category:`Transitions`,difficulty:`Intermediate`,title:`Basic Transition`,description:`Learn how to make style changes happen smoothly instead of instantly. Transitions are commonly used for hover effects on buttons, cards, and interactive elements.`,fileName:`styles.css`,code:`.button {
+  transition: 0.3s;
+}`}),y({id:49,language:`CSS`,category:`Transitions`,difficulty:`Intermediate`,title:`Transition Property`,description:`Learn how to control which CSS property changes smoothly. This allows you to create focused animations instead of transitioning every possible style.`,fileName:`styles.css`,code:`.button {
+  transition-property: background;
+}`}),y({id:50,language:`CSS`,category:`Transitions`,difficulty:`Intermediate`,title:`Transition Duration`,description:`Learn how to control how long a transition takes. Duration determines whether a style change feels quick, slow, or smooth.`,fileName:`styles.css`,code:`.button {
+  transition-duration: 0.3s;
+}`}),y({id:51,language:`CSS`,category:`Transitions`,difficulty:`Intermediate`,title:`Transition Timing`,description:`Learn how to control the speed pattern of transitions. Timing functions change how an animation speeds up or slows down during the transition.`,fileName:`styles.css`,code:`.button {
+  transition-timing-function: ease;
+}`}),y({id:52,language:`CSS`,category:`Transforms`,difficulty:`Intermediate`,title:`Scale Transform`,description:`Learn how to resize elements visually without changing their actual layout space. Scale transforms are commonly used for hover effects and interactive cards.`,fileName:`styles.css`,code:`.card:hover {
+  transform: scale(1.05);
+}`}),y({id:53,language:`CSS`,category:`Transforms`,difficulty:`Intermediate`,title:`Rotate Transform`,description:`Learn how to rotate elements using CSS transforms. Rotations can be used for decorative effects, icons, and interactive animations.`,fileName:`styles.css`,code:`.icon {
+  transform: rotate(45deg);
+}`}),y({id:54,language:`CSS`,category:`Transforms`,difficulty:`Intermediate`,title:`Translate Transform`,description:`Learn how to move elements visually using translate. Unlike changing margins or positioning, transforms move elements without affecting the layout around them.`,fileName:`styles.css`,code:`.box {
+  transform: translateX(50px);
+}`}),y({id:55,language:`CSS`,category:`Transforms`,difficulty:`Intermediate`,title:`Multiple Transforms`,description:`Learn how to combine multiple transforms on one element. Multiple transformations allow you to create more complex visual movements and effects.`,fileName:`styles.css`,code:`.card:hover {
+  transform: scale(1.05) rotate(2deg);
+}`}),y({id:56,language:`CSS`,category:`Flexbox`,difficulty:`Intermediate`,title:`Display Flex`,description:`Learn how to create flexible layouts using flexbox. Display flex changes how elements are arranged and allows items to be positioned more easily in rows or columns.`,fileName:`styles.css`,code:`.container {
+  display: flex;
+}`}),y({id:57,language:`CSS`,category:`Flexbox`,difficulty:`Intermediate`,title:`Flex Direction`,description:`Learn how to control the direction of flex items. Flex direction determines whether elements are arranged in a row or stacked vertically in a column.`,fileName:`styles.css`,code:`.container {
+  display: flex;
+  flex-direction: column;
+}`}),y({id:58,language:`CSS`,category:`Flexbox`,difficulty:`Intermediate`,title:`Justify Content`,description:`Learn how to position items along the main axis of a flex container. Justify content controls spacing and alignment between elements.`,fileName:`styles.css`,code:`.container {
+  display: flex;
+  justify-content: center;
+}`}),y({id:59,language:`CSS`,category:`Flexbox`,difficulty:`Intermediate`,title:`Align Items`,description:`Learn how to align items across the opposite axis in a flex container. Align items is commonly used to vertically center content in a row layout.`,fileName:`styles.css`,code:`.container {
+  display: flex;
+  align-items: center;
+}`}),y({id:60,language:`CSS`,category:`Flexbox`,difficulty:`Intermediate`,title:`Flex Gap`,description:`Learn how to add consistent spacing between flex items. Gap creates space between elements without needing individual margins.`,fileName:`styles.css`,code:`.container {
+  display: flex;
+  gap: 20px;
+}`}),y({id:61,language:`CSS`,category:`Flexbox`,difficulty:`Intermediate`,title:`Flex Wrap`,description:`Learn how to control whether flex items stay on one line or move to additional lines. Flex wrap helps layouts adjust when there is not enough space for all items.`,fileName:`styles.css`,code:`.container {
+  display: flex;
+  flex-wrap: wrap;
+}`}),y({id:62,language:`CSS`,category:`Flexbox`,difficulty:`Intermediate`,title:`Flex Grow`,description:`Learn how flex items can expand to fill available space. Flex grow allows elements inside a flex container to take up extra room proportionally.`,fileName:`styles.css`,code:`.item {
+  flex-grow: 1;
+}`}),y({id:63,language:`CSS`,category:`Flexbox`,difficulty:`Intermediate`,title:`Flex Shrink`,description:`Learn how flex items can become smaller when there is not enough room. Flex shrink helps prevent items from overflowing their container.`,fileName:`styles.css`,code:`.item {
+  flex-shrink: 1;
+}`}),y({id:64,language:`CSS`,category:`Flexbox`,difficulty:`Intermediate`,title:`Flex Basis`,description:`Learn how to set the starting size of a flex item before extra space is distributed. Flex basis controls the initial width or height of an item.`,fileName:`styles.css`,code:`.item {
+  flex-basis: 200px;
+}`}),y({id:65,language:`CSS`,category:`Flexbox`,difficulty:`Intermediate`,title:`Centering With Flexbox`,description:`Learn how to perfectly center content inside a container. Combining justify-content and align-items is one of the most common ways to center elements in modern layouts.`,fileName:`styles.css`,code:`.container {
   display: flex;
   justify-content: center;
   align-items: center;
-}`}),y({id:4003,language:`CSS`,category:`Grid`,difficulty:`Intermediate`,title:`Three Column Grid`,description:``,fileName:`styles.css`,code:`.grid {
+}`}),y({id:66,language:`CSS`,category:`Grid`,difficulty:`Intermediate`,title:`Display Grid`,description:`Learn how to create grid layouts using CSS Grid. Grid allows you to organize elements into rows and columns, making it useful for page layouts and card collections.`,fileName:`styles.css`,code:`.container {
+  display: grid;
+}`}),y({id:67,language:`CSS`,category:`Grid`,difficulty:`Intermediate`,title:`Grid Columns`,description:`Learn how to define columns in a grid layout. Grid template columns controls how many columns appear and how much space each column receives.`,fileName:`styles.css`,code:`.container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}`}),y({id:4004,language:`CSS`,category:`Pseudo Classes`,difficulty:`Intermediate`,title:`Button Hover`,description:``,fileName:`styles.css`,code:`button {
-  background: royalblue;
-  color: white;
+}`}),y({id:68,language:`CSS`,category:`Grid`,difficulty:`Intermediate`,title:`Grid Rows`,description:`Learn how to define rows in a grid layout. Grid template rows controls the height and structure of rows inside a grid container.`,fileName:`styles.css`,code:`.container {
+  display: grid;
+  grid-template-rows: 100px 100px;
+}`}),y({id:69,language:`CSS`,category:`Grid`,difficulty:`Intermediate`,title:`Grid Gap`,description:`Learn how to add consistent spacing between grid items. Gap creates space between rows and columns without needing individual margins.`,fileName:`styles.css`,code:`.container {
+  display: grid;
+  gap: 20px;
+}`}),y({id:70,language:`CSS`,category:`Grid`,difficulty:`Intermediate`,title:`Grid Template Areas`,description:`Learn how to create named sections in a grid layout. Grid template areas allow you to visually describe where parts of a webpage should appear.`,fileName:`styles.css`,code:`.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main sidebar";
+}`}),y({id:71,language:`CSS`,category:`Grid`,difficulty:`Intermediate`,title:`Grid Column Span`,description:`Learn how to make a grid item take up multiple columns. Column span is useful when a section needs to be wider than the other items in a grid layout.`,fileName:`styles.css`,code:`.header {
+  grid-column: span 2;
+}`}),y({id:72,language:`CSS`,category:`Grid`,difficulty:`Intermediate`,title:`Grid Row Span`,description:`Learn how to make a grid item take up multiple rows. Row span allows certain sections to become taller than surrounding grid items.`,fileName:`styles.css`,code:`.sidebar {
+  grid-row: span 2;
+}`}),y({id:73,language:`CSS`,category:`Grid`,difficulty:`Intermediate`,title:`Grid Alignment`,description:`Learn how to position items inside a grid container. Grid alignment properties control where content sits inside its available space.`,fileName:`styles.css`,code:`.container {
+  display: grid;
+  place-items: center;
+}`}),y({id:74,language:`CSS`,category:`Positioning`,difficulty:`Intermediate`,title:`Position Relative`,description:`Learn how to create a positioning reference point for child elements. Relative positioning allows elements inside it to be positioned based on that container.`,fileName:`styles.css`,code:`.container {
+  position: relative;
+}`}),y({id:75,language:`CSS`,category:`Positioning`,difficulty:`Intermediate`,title:`Position Absolute`,description:`Learn how to position elements exactly where you want them. Absolute positioning removes an element from normal layout flow and positions it relative to a positioned parent.`,fileName:`styles.css`,code:`.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}`}),y({id:76,language:`CSS`,category:`Positioning`,difficulty:`Intermediate`,title:`Position Fixed`,description:`Learn how to keep an element attached to the browser window. Fixed positioning is commonly used for navigation bars, floating buttons, and elements that should stay visible while scrolling.`,fileName:`styles.css`,code:`.button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}`}),y({id:77,language:`CSS`,category:`Positioning`,difficulty:`Intermediate`,title:`Position Sticky`,description:`Learn how to make an element stick while scrolling through a page. Sticky positioning allows elements like headers or sidebars to remain visible after reaching a certain point.`,fileName:`styles.css`,code:`.header {
+  position: sticky;
+  top: 0;
+}`}),y({id:78,language:`CSS`,category:`Positioning`,difficulty:`Intermediate`,title:`Z Index`,description:`Learn how to control which elements appear in front of others. The z-index property changes the stacking order of positioned elements.`,fileName:`styles.css`,code:`.modal {
+  position: absolute;
+  z-index: 10;
+}`}),y({id:79,language:`CSS`,category:`Overflow`,difficulty:`Intermediate`,title:`Hidden Overflow`,description:`Learn how to control content that extends outside of an element. Hidden overflow removes anything that goes beyond the container boundaries.`,fileName:`styles.css`,code:`.box {
+  overflow: hidden;
+}`}),y({id:80,language:`CSS`,category:`Overflow`,difficulty:`Intermediate`,title:`Scrollable Overflow`,description:`Learn how to make containers scroll when content becomes too large. Scrollable overflow keeps layouts organized while allowing users to access extra content.`,fileName:`styles.css`,code:`.box {
+  overflow: auto;
+}`}),y({id:81,language:`CSS`,category:`Responsive Design`,difficulty:`Intermediate`,title:`Media Query`,description:`Learn how to change styles based on screen size. Media queries allow webpages to adjust their layout for different devices like phones, tablets, and desktops.`,fileName:`styles.css`,code:`@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}`}),y({id:82,language:`CSS`,category:`Responsive Design`,difficulty:`Intermediate`,title:`Mobile Font Size`,description:`Learn how to adjust text sizes for smaller screens. Responsive designs often change font sizes so content remains easy to read on different devices.`,fileName:`styles.css`,code:`@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+}`}),y({id:83,language:`CSS`,category:`Responsive Design`,difficulty:`Intermediate`,title:`Responsive Width`,description:`Learn how to make elements resize based on the available screen space. Percentage widths allow containers to adapt instead of using fixed sizes.`,fileName:`styles.css`,code:`.container {
+  width: 100%;
+}`}),y({id:84,language:`CSS`,category:`Responsive Design`,difficulty:`Intermediate`,title:`Viewport Units`,description:`Learn how to size elements relative to the browser window. Viewport units allow designs to scale based on the user's screen size.`,fileName:`styles.css`,code:`.hero {
+  height: 100vh;
+}`}),y({id:85,language:`CSS`,category:`Responsive Design`,difficulty:`Intermediate`,title:`Responsive Images`,description:`Learn how to make images resize properly inside different layouts. Responsive images prevent content from overflowing smaller screens.`,fileName:`styles.css`,code:`img {
+  max-width: 100%;
+  height: auto;
+}`}),y({id:86,language:`CSS`,category:`Variables`,difficulty:`Intermediate`,title:`CSS Variable`,description:`Learn how to create reusable values in CSS using variables. Variables help keep colors, spacing, and other design choices consistent across an entire webpage.`,fileName:`styles.css`,code:`:root {
+  --primary-color: blue;
+}`}),y({id:87,language:`CSS`,category:`Variables`,difficulty:`Intermediate`,title:`Using CSS Variables`,description:`Learn how to use previously created CSS variables. Using variables allows you to update a design value in one place instead of changing many different styles.`,fileName:`styles.css`,code:`.button {
+  background: var(--primary-color);
+}`}),y({id:88,language:`CSS`,category:`Functions`,difficulty:`Intermediate`,title:`Calc Function`,description:`Learn how to perform calculations inside CSS values. The calc function allows you to combine different units when creating flexible layouts.`,fileName:`styles.css`,code:`.container {
+  width: calc(100% - 40px);
+}`}),y({id:89,language:`CSS`,category:`Functions`,difficulty:`Intermediate`,title:`Clamp Function`,description:`Learn how to create responsive sizes with limits. The clamp function allows values to grow and shrink while staying between a minimum and maximum size.`,fileName:`styles.css`,code:`h1 {
+  font-size: clamp(24px, 5vw, 48px);
+}`}),y({id:90,language:`CSS`,category:`Functions`,difficulty:`Intermediate`,title:`Min and Max Functions`,description:`Learn how to control sizing with minimum and maximum limits. These functions help create layouts that adapt while preventing elements from becoming too large or too small.`,fileName:`styles.css`,code:`.box {
+  width: min(500px, 100%);
+}`}),y({id:91,language:`CSS`,category:`Animations`,difficulty:`Intermediate`,title:`Keyframe Animation`,description:`Learn how to create animations in CSS using keyframes. Keyframes define the different stages of an animation and allow elements to change styles over time.`,fileName:`styles.css`,code:`@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100px);
+  }
+}`}),y({id:92,language:`CSS`,category:`Animations`,difficulty:`Intermediate`,title:`Animation Property`,description:`Learn how to apply a keyframe animation to an element. The animation property controls which animation runs and how it behaves.`,fileName:`styles.css`,code:`.box {
+  animation: slide 2s;
+}`}),y({id:93,language:`CSS`,category:`Animations`,difficulty:`Intermediate`,title:`Animation Duration`,description:`Learn how to control how long an animation takes to complete. Duration changes the speed of movement and visual effects.`,fileName:`styles.css`,code:`.box {
+  animation-duration: 3s;
+}`}),y({id:94,language:`CSS`,category:`Animations`,difficulty:`Intermediate`,title:`Animation Repeat`,description:`Learn how to make animations run multiple times. Animation iteration count controls whether an animation happens once or repeats.`,fileName:`styles.css`,code:`.box {
+  animation-iteration-count: infinite;
+}`}),y({id:95,language:`CSS`,category:`Animations`,difficulty:`Intermediate`,title:`Animation Delay`,description:`Learn how to wait before starting an animation. Animation delay is useful when creating timed effects or sequences of movement.`,fileName:`styles.css`,code:`.box {
+  animation-delay: 1s;
+}`}),y({id:96,language:`CSS`,category:`Animations`,difficulty:`Intermediate`,title:`Animation Direction`,description:`Learn how to control the direction an animation plays. Animation direction allows effects to move forward, backward, or alternate between both directions.`,fileName:`styles.css`,code:`.box {
+  animation-direction: alternate;
+}`}),y({id:97,language:`CSS`,category:`Filters`,difficulty:`Intermediate`,title:`Blur Filter`,description:`Learn how to apply visual effects to elements using CSS filters. The blur filter can soften images and create visual effects without changing the original file.`,fileName:`styles.css`,code:`.image {
+  filter: blur(5px);
+}`}),y({id:98,language:`CSS`,category:`Filters`,difficulty:`Intermediate`,title:`Brightness Filter`,description:`Learn how to adjust the brightness of elements using CSS filters. This is commonly used for image effects and hover interactions.`,fileName:`styles.css`,code:`.image {
+  filter: brightness(80%);
+}`}),y({id:99,language:`CSS`,category:`Advanced Layout`,difficulty:`Intermediate`,title:`CSS Card Component`,description:`Learn how multiple CSS concepts combine to create a reusable card design. Cards are common UI elements that use spacing, borders, colors, and shadows together.`,fileName:`styles.css`,code:`.card {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px gray;
+}`}),y({id:100,language:`CSS`,category:`Advanced Layout`,difficulty:`Intermediate`,title:`Responsive Page Layout`,description:`Learn how different CSS tools work together to create a responsive webpage. This combines layout, spacing, and responsive design concepts used in real projects.`,fileName:`styles.css`,code:`.page {
+  display: flex;
+  gap: 20px;
 }
 
-button:hover {
-  background: navy;
-}`}),y({id:4005,language:`CSS`,category:`Positioning`,difficulty:`Intermediate`,title:`Fixed Header`,description:``,fileName:`styles.css`,code:`.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+@media (max-width: 768px) {
+  .page {
+    flex-direction: column;
+  }
 }`})],ee=[y({id:1,language:`SQL`,category:`Queries`,difficulty:`Beginner`,title:`Select All`,description:`Learn how to retrieve every record from a database table. SELECT is the foundation of reading data in SQL and is used constantly in backend applications.`,fileName:`queries.sql`,code:`SELECT *
 FROM users;`}),y({id:2,language:`SQL`,category:`Filtering`,difficulty:`Beginner`,title:`WHERE Clause`,description:`Learn how to filter database results based on conditions. WHERE allows applications to find only the records that match specific requirements.`,fileName:`queries.sql`,code:`SELECT *
 FROM users
@@ -2201,7 +2581,7 @@ FROM employee_tree;`}),y({id:100,language:`SQL`,category:`Advanced Queries`,diff
 RANK() OVER (
   ORDER BY salary DESC
 ) AS salary_rank
-FROM employees;`})],T=[...b,...x,...S,...C,...w,...ee],E=o((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.fragment`);function r(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.Fragment=n,e.jsx=r,e.jsxs=r})),D=o(((e,t)=>{t.exports=E()}))();function te(){return(0,D.jsxs)(`header`,{children:[(0,D.jsx)(`h1`,{children:`Dev Reps`}),(0,D.jsx)(`p`,{children:`Build coding muscle memory by typing real code.`})]})}var ne=[`All`,`JavaScript`,`React`,`Express`,`HTML`,`CSS`,`SQL`],re=[`All`,`Beginner`,`Intermediate`,`Advanced`];function ie({language:e,setLanguage:t,difficulty:n,setDifficulty:r,questions:i,question:a,setQuestion:o}){return(0,D.jsxs)(`section`,{className:`filters`,children:[(0,D.jsx)(`select`,{id:`language`,value:e,onChange:e=>t(e.target.value),children:ne.map(e=>(0,D.jsx)(`option`,{value:e,children:e===`All`?`Language`:e},e))}),(0,D.jsx)(`select`,{id:`difficulty`,value:n,onChange:e=>r(e.target.value),children:re.map(e=>(0,D.jsx)(`option`,{value:e,children:e===`All`?`Difficulty`:e},e))}),(0,D.jsxs)(`select`,{id:`question`,value:a,disabled:e===`All`,onChange:e=>o(e.target.value),children:[(0,D.jsx)(`option`,{value:`All`,children:e===`All`?`Select Language First`:`Question`}),i.map((t,n)=>(0,D.jsxs)(`option`,{value:t.value,children:[e,` #`,n+1]},t.value))]})]})}function ae({current:e,total:t,typedCharacters:n,totalCharacters:r}){let i=t===0?0:Math.round(e/t*100);return(0,D.jsxs)(D.Fragment,{children:[(0,D.jsxs)(`div`,{className:`progress-card`,children:[(0,D.jsx)(`h3`,{children:`Exercise`}),(0,D.jsxs)(`p`,{children:[e,` / `,t]})]}),(0,D.jsxs)(`div`,{className:`progress-card`,children:[(0,D.jsx)(`h3`,{children:`Course`}),(0,D.jsxs)(`p`,{children:[i,`%`]})]}),(0,D.jsxs)(`div`,{className:`progress-card`,children:[(0,D.jsx)(`h3`,{children:`Characters`}),(0,D.jsxs)(`p`,{children:[n,` / `,r]})]})]})}function oe(e,t){(t==null||t>e.length)&&(t=e.length);for(var n=0,r=Array(t);n<t;n++)r[n]=e[n];return r}function se(e){if(Array.isArray(e))return e}function O(e,t,n){return(t=me(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function k(e,t){var n=e==null?null:typeof Symbol<`u`&&e[Symbol.iterator]||e[`@@iterator`];if(n!=null){var r,i,a,o,s=[],c=!0,l=!1;try{if(a=(n=n.call(e)).next,t!==0)for(;!(c=(r=a.call(n)).done)&&(s.push(r.value),s.length!==t);c=!0);}catch(e){l=!0,i=e}finally{try{if(!c&&n.return!=null&&(o=n.return(),Object(o)!==o))return}finally{if(l)throw i}}return s}}function ce(){throw TypeError(`Invalid attempt to destructure non-iterable instance.
+FROM employees;`})],T=[...b,...x,...S,...C,...w,...ee],E=o((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.fragment`);function r(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.Fragment=n,e.jsx=r,e.jsxs=r})),D=o(((e,t)=>{t.exports=E()}))();function te(){return(0,D.jsxs)(`header`,{children:[(0,D.jsx)(`h1`,{children:`Dev Reps`}),(0,D.jsx)(`p`,{children:`Build coding muscle memory by typing real code.`})]})}var ne=[`All`,`JavaScript`,`React`,`Express`,`HTML`,`CSS`,`SQL`],re=[`All`,`Beginner`,`Intermediate`,`Advanced`];function ie({language:e,setLanguage:t,difficulty:n,setDifficulty:r,questions:i,question:a,setQuestion:o}){return(0,D.jsxs)(`section`,{className:`filters`,children:[(0,D.jsx)(`select`,{id:`language`,value:e,onChange:e=>t(e.target.value),children:ne.map(e=>(0,D.jsx)(`option`,{value:e,children:e===`All`?`All Languages`:e},e))}),(0,D.jsx)(`select`,{id:`difficulty`,value:n,onChange:e=>r(e.target.value),children:re.map(e=>(0,D.jsx)(`option`,{value:e,children:e===`All`?`Mixed Difficulty`:e},e))}),(0,D.jsxs)(`select`,{id:`question`,value:a,disabled:e===`All`,onChange:e=>o(e.target.value),children:[(0,D.jsx)(`option`,{value:`All`,children:e===`All`?`Select Language First`:`Question`}),i.map((t,n)=>(0,D.jsxs)(`option`,{value:t.value,children:[e,` #`,n+1]},t.value))]})]})}function ae({current:e,total:t,typedCharacters:n,totalCharacters:r}){let i=t===0?0:Math.round(e/t*100);return(0,D.jsxs)(D.Fragment,{children:[(0,D.jsxs)(`div`,{className:`progress-card`,children:[(0,D.jsx)(`h3`,{children:`Exercise`}),(0,D.jsxs)(`p`,{children:[e,` / `,t]})]}),(0,D.jsxs)(`div`,{className:`progress-card`,children:[(0,D.jsx)(`h3`,{children:`Course`}),(0,D.jsxs)(`p`,{children:[i,`%`]})]}),(0,D.jsxs)(`div`,{className:`progress-card`,children:[(0,D.jsx)(`h3`,{children:`Characters`}),(0,D.jsxs)(`p`,{children:[n,` / `,r]})]})]})}function oe(e,t){(t==null||t>e.length)&&(t=e.length);for(var n=0,r=Array(t);n<t;n++)r[n]=e[n];return r}function se(e){if(Array.isArray(e))return e}function O(e,t,n){return(t=me(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function k(e,t){var n=e==null?null:typeof Symbol<`u`&&e[Symbol.iterator]||e[`@@iterator`];if(n!=null){var r,i,a,o,s=[],c=!0,l=!1;try{if(a=(n=n.call(e)).next,t!==0)for(;!(c=(r=a.call(n)).done)&&(s.push(r.value),s.length!==t);c=!0);}catch(e){l=!0,i=e}finally{try{if(!c&&n.return!=null&&(o=n.return(),Object(o)!==o))return}finally{if(l)throw i}}return s}}function ce(){throw TypeError(`Invalid attempt to destructure non-iterable instance.
 In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`)}function le(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,r)}return n}function ue(e){for(var t=1;t<arguments.length;t++){var n=arguments[t]==null?{}:arguments[t];t%2?le(Object(n),!0).forEach(function(t){O(e,t,n[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):le(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))})}return e}function de(e,t){if(e==null)return{};var n,r,i=fe(e,t);if(Object.getOwnPropertySymbols){var a=Object.getOwnPropertySymbols(e);for(r=0;r<a.length;r++)n=a[r],t.indexOf(n)===-1&&{}.propertyIsEnumerable.call(e,n)&&(i[n]=e[n])}return i}function fe(e,t){if(e==null)return{};var n={};for(var r in e)if({}.hasOwnProperty.call(e,r)){if(t.indexOf(r)!==-1)continue;n[r]=e[r]}return n}function A(e,t){return se(e)||k(e,t)||he(e,t)||ce()}function pe(e,t){if(typeof e!=`object`||!e)return e;var n=e[Symbol.toPrimitive];if(n!==void 0){var r=n.call(e,t);if(typeof r!=`object`)return r;throw TypeError(`@@toPrimitive must return a primitive value.`)}return(t===`string`?String:Number)(e)}function me(e){var t=pe(e,`string`);return typeof t==`symbol`?t:t+``}function he(e,t){if(e){if(typeof e==`string`)return oe(e,t);var n={}.toString.call(e).slice(8,-1);return n===`Object`&&e.constructor&&(n=e.constructor.name),n===`Map`||n===`Set`?Array.from(e):n===`Arguments`||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?oe(e,t):void 0}}function ge(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _e(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,r)}return n}function ve(e){for(var t=1;t<arguments.length;t++){var n=arguments[t]==null?{}:arguments[t];t%2?_e(Object(n),!0).forEach(function(t){ge(e,t,n[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):_e(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))})}return e}function ye(){var e=[...arguments];return function(t){return e.reduceRight(function(e,t){return t(e)},t)}}function be(e){return function t(){var n=this,r=[...arguments];return r.length>=e.length?e.apply(this,r):function(){var e=[...arguments];return t.apply(n,[].concat(r,e))}}}function xe(e){return{}.toString.call(e).includes(`Object`)}function Se(e){return!Object.keys(e).length}function Ce(e){return typeof e==`function`}function we(e,t){return Object.prototype.hasOwnProperty.call(e,t)}function Te(e,t){return xe(t)||Ae(`changeType`),Object.keys(t).some(function(t){return!we(e,t)})&&Ae(`changeField`),t}function Ee(e){Ce(e)||Ae(`selectorType`)}function De(e){Ce(e)||xe(e)||Ae(`handlerType`),xe(e)&&Object.values(e).some(function(e){return!Ce(e)})&&Ae(`handlersType`)}function Oe(e){e||Ae(`initialIsRequired`),xe(e)||Ae(`initialType`),Se(e)&&Ae(`initialContent`)}function ke(e,t){throw Error(e[t]||e.default)}var Ae=be(ke)({initialIsRequired:`initial state is required`,initialType:`initial state should be an object`,initialContent:`initial state shouldn't be an empty object`,handlerType:`handler should be an object or a function`,handlersType:`all handlers should be a functions`,selectorType:`selector should be a function`,changeType:`provided value of changes should be an object`,changeField:`it seams you want to change a field in the state which is not specified in the "initial" state`,default:"an unknown error accured in `state-local` package"}),je={changes:Te,selector:Ee,handler:De,initial:Oe};function Me(e){var t=arguments.length>1&&arguments[1]!==void 0?arguments[1]:{};je.initial(e),je.handler(t);var n={current:e},r=be(Fe)(n,t),i=be(Pe)(n),a=be(je.changes)(e),o=be(Ne)(n);function s(){var e=arguments.length>0&&arguments[0]!==void 0?arguments[0]:function(e){return e};return je.selector(e),e(n.current)}function c(e){ye(r,i,a,o)(e)}return[s,c]}function Ne(e,t){return Ce(t)?t(e.current):t}function Pe(e,t){return e.current=ve(ve({},e.current),t),t}function Fe(e,t,n){return Ce(t)?t(e.current):Object.keys(n).forEach(function(n){return t[n]?.call(t,e.current[n])}),n}var Ie={create:Me},Le={paths:{vs:`https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs`}};function Re(e){return function t(){var n=this,r=[...arguments];return r.length>=e.length?e.apply(this,r):function(){var e=[...arguments];return t.apply(n,[].concat(r,e))}}}function ze(e){return{}.toString.call(e).includes(`Object`)}function Be(e){return e||We(`configIsRequired`),ze(e)||We(`configType`),e.urls?(Ve(),{paths:{vs:e.urls.monacoBase}}):e}function Ve(){console.warn(Ue.deprecation)}function He(e,t){throw Error(e[t]||e.default)}var Ue={configIsRequired:`the configuration object is required`,configType:`the configuration object should be an object`,default:"an unknown error accured in `@monaco-editor/loader` package",deprecation:`Deprecation warning!
     You are using deprecated way of configuration.
 
