@@ -192,8 +192,8 @@ h2 {
 
 pre,
 textarea {
-  height: 280px;
-  margin: 18px 0;
+  height: 420px;
+  margin: 0;
   border-radius: 12px;
 }
 
@@ -207,9 +207,9 @@ textarea {
 }
 
 pre {
-  height: 280px;
+  height: 360px;
   margin: 10px 0;
-  padding: 20px;
+  padding: 16px;
   overflow-x: auto;
   overflow-y: auto;
   background: #f7f1e8;
@@ -387,6 +387,54 @@ button:disabled {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
+.exercise-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  align-items: start;
+}
+
+.exercise-tabs-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.exercise-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.typing-panel,
+.exercise-panel {
+  min-width: 0;
+}
+
+.exercise-panel {
+  position: relative;
+}
+
+.typing-panel {
+  padding-top: 10px;
+}
+
+.inactive-tab {
+  background: transparent;
+  color: #8f8378;
+  border: 1px solid #ddd1c2;
+  box-shadow: none;
+}
+
+.inactive-tab:hover {
+  background: transparent;
+  color: white;
+  transform: none;
+}
+
 @media (max-width: 1060px) {
   main {
     padding: 22px;
@@ -402,9 +450,10 @@ button:disabled {
     gap: 12px;
   }
 
-  .filters {
+ .filters {
     width: 100%;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
 
@@ -432,20 +481,28 @@ button:disabled {
   }
 
   .exercise-description {
-  height: 120px;
+    height: 100px;
   }
 
   pre {
-    height: 200px;
+    height: 360px;
+    margin: 10px 0;
   }
 
   textarea {
-    height: 200px;
+    height: 280px;
   }
 
   .button-row {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
     padding-bottom: 24px;
+  }
+
+  .button-row button {
+    width: auto;
+    padding: 8px 16px;
   }
 
   .modal {
@@ -458,5 +515,18 @@ button:disabled {
 
   .modal .button-row {
     padding-bottom: 0;
+  }
+
+  .exercise-tabs-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .exercise-tabs {
+    justify-content: center;
+  }
+
+  .exercise-layout {
+    grid-template-columns: 1fr 1fr;
   }
 }

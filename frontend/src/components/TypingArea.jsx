@@ -32,7 +32,8 @@ function TypingArea({
 
   return (
     <Editor
-      height="280px"
+      width="100%"
+      height={window.innerWidth <= 1060 ? "360px" : "480px"}
       defaultLanguage="javascript"
       theme="vs-dark"
       value={value}
